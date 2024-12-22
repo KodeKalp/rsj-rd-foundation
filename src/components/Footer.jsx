@@ -9,7 +9,7 @@ export default function Footer() {
                         <div className="footer-contact">
                             <h2>Contact Us</h2>
                             <a href="https://maps.app.goo.gl/HQg6gMPpAJ445cda6" target="_blank" rel="noopener noreferrer"><p><i className="fa fa-map-marker-alt"></i>Gondia, Maharashtra, India</p></a>
-                            <a href="tel:+91-8380804409"><p><i className="fa fa-phone"></i>+91-8380804409</p></a>
+                            <a href="tel:+918380804409"><p><i className="fa fa-phone"></i>+91 83 8080 4409</p></a>
                             <a href="mailto:connect@rsjrdfoundation.org"><p><i className="fa fa-envelope"></i>connect@rsjrdfoundation.org</p></a>
                             <div className="footer-social">
                                 <a className="btn btn-custom" href="https://twitter.com/vit_socials"><i className="fab fa-x-twitter"></i></a>
@@ -58,7 +58,7 @@ export default function Footer() {
                         <p>&copy; <a href="#">RSJ RURAL DEVELOPMENT FOUNDATION</a> | 2024, All Right Reserved.</p>
                     </div>
                     <div className="col-md-6">
-                        <p>Designed By <a href="https://www.linkedin.com/in/bhavesh-patil-92b7aa22a">KodeKalp Global Technoloigies</a></p>
+                        <p>Design & Developed by <a href="https://www.kodekalp.com"> KodeKalp Global Technologies Private Limited</a></p>
                     </div>
                 </div>
             </div>

@@ -75,7 +75,7 @@ export default function Navbar() {
             {/* <!-- Nav Bar Start --> */}
             <div className="navbar navbar-expand-lg bg-dark navbar-dark">
                 <div className="container-fluid">
-                    <Link to="/" className="navbar-brand">RSJ RURAL DEVELOPMENT</Link>
+                    <Link to="/" className="navbar-brand">RSJRD Foundation</Link>
                     <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span className="navbar-toggler-icon"></span>
                     </button>
