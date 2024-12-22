@@ -8,9 +8,9 @@ export default function Footer() {
                     <div className="col-lg-3 col-md-6">
                         <div className="footer-contact">
                             <h2>Contact Us</h2>
-                            <a href="https://maps.app.goo.gl/HQg6gMPpAJ445cda6" target="_blank" rel="noopener noreferrer"><p><i className="fa fa-map-marker-alt"></i>VIT, Pune, India</p></a>
-                            <a href="tel:+91-7385223242"><p><i className="fa fa-phone"></i>+91-7385223242</p></a>
-                            <a href="mailto:sanjivani.vitswd@vit.edu"><p><i className="fa fa-envelope"></i>sanjivani.vitswd@vit.edu</p></a>
+                            <a href="https://maps.app.goo.gl/HQg6gMPpAJ445cda6" target="_blank" rel="noopener noreferrer"><p><i className="fa fa-map-marker-alt"></i>Gondia, Maharashtra, India</p></a>
+                            <a href="tel:+91-8380804409"><p><i className="fa fa-phone"></i>+91-8380804409</p></a>
+                            <a href="mailto:connect@rsjrdfoundation.org"><p><i className="fa fa-envelope"></i>connect@rsjrdfoundation.org</p></a>
                             <div className="footer-social">
                                 <a className="btn btn-custom" href="https://twitter.com/vit_socials"><i className="fab fa-x-twitter"></i></a>
                                 <a className="btn btn-custom" href="https://www.facebook.com/vitsocials"><i className="fab fa-facebook-f"></i></a>
@@ -55,10 +55,10 @@ export default function Footer() {
             <div className="container copyright">
                 <div className="row">
                     <div className="col-md-6">
-                        <p>&copy; <a href="#">THE SANJIVANI NGO</a> | 2024, All Right Reserved.</p>
+                        <p>&copy; <a href="#">RSJ RURAL DEVELOPMENT FOUNDATION</a> | 2024, All Right Reserved.</p>
                     </div>
                     <div className="col-md-6">
-                        <p>Designed By <a href="https://www.linkedin.com/in/bhavesh-patil-92b7aa22a">TY_CS_C_52, VIT, Pune</a></p>
+                        <p>Designed By <a href="https://www.linkedin.com/in/bhavesh-patil-92b7aa22a">KodeKalp Global Technoloigies</a></p>
                     </div>
                 </div>
             </div>

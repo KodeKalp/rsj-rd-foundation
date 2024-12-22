@@ -104,7 +104,8 @@
     padding: 0; /* Add some padding around the image */
     img {
       width: 700px; /* Set the image width to 200px */
-      height: 600px; /* Set the image height to 200px */
+      height: 600px;
+      border-radius: 10%; /* Set the image height to 200px */
     }
     @media (max-width: 767.98px) {
       img {

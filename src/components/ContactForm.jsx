@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import contact from "../assets/contactus.png";
+import contact from "../assets/rsjcontact.jpg";
 import '../css/contactForm.css';
 
 function ContactForm() {
@@ -74,7 +74,7 @@ function ContactForm() {
                         <h2>Contact for any query</h2>
                     </div>
                     <div className="contact-img">
-                        <img src={contact} alt="Image" />
+                        <img src={contact} alt="Image" height={50}/> 
                     </div>
                     <div className="contact-form">
                         <div className='sent text-success' id="success"></div>

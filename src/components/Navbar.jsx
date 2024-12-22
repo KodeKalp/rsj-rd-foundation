@@ -47,11 +47,11 @@ export default function Navbar() {
                                 </div>
                                 <div className="text">
                                     <i className="fa fa-phone"></i>
-                                    <a href="tel:+91-7385223242"><p>+91-7385223242</p></a>
+                                    <a href="tel:+91-8380804409"><p>+91-8380804409</p></a>
                                 </div>
                                 <div className="text">
                                     <i className="fa fa-envelope"></i>
-                                    <a href="mailto:sanjivani.vitswd@vit.edu"><p>sanjivani.vitswd@vit.edu</p></a>
+                                    <a href="mailto:connect@rsjrdfoundation.org"><p>connect@rsjrdfoundation.org</p></a>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +75,7 @@ export default function Navbar() {
             {/* <!-- Nav Bar Start --> */}
             <div className="navbar navbar-expand-lg bg-dark navbar-dark">
                 <div className="container-fluid">
-                    <Link to="/" className="navbar-brand">SANJIVANI</Link>
+                    <Link to="/" className="navbar-brand">RSJ RURAL DEVELOPMENT</Link>
                     <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span className="navbar-toggler-icon"></span>
                     </button>
