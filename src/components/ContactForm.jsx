@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import contact from "../assets/rsjcontact.jpg";
+import contact from "../assets/contactus.png";
 import '../css/contactForm.css';
 
 function ContactForm() {

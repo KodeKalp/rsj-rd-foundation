@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import Carousel from "react-spring-3d-carousel";
 import { v4 as uuidv4 } from "uuid";
 import { config } from "react-spring";
-import sudhaar from '../assets/banner.jpg';
-import gyaan from '../assets/rsjcontact.jpg';
-import nirmaan from '../assets/bannerOne.jpg';
-import gogreen from '../assets/bannerTwo.jpg';
-//import muskaan from '../assets/Initiatives/Muskaan.png';
+// import sudhaar from '../assets/banner.jpg';
+// import gyaan from '../assets/rsjcontact.jpg';
+// import nirmaan from '../assets/bannerOne.jpg';
+// import gogreen from '../assets/bannerTwo.jpg';
+// import muskaan from '../assets/Initiatives/Muskaan.png';
+import sudhaar from '../assets/Initiatives/Sudhaar.png';
+import gyaan from '../assets/Initiatives/Gyaan.png';
+import nirmaan from '../assets/Initiatives/Nirmaan.png';
+import gogreen from '../assets/Initiatives/Muskaan.png';
 import '../css/initiatives.css';
 
 const Initiatives = () => {
@@ -92,7 +96,11 @@ const Initiatives = () => {
     <div className="Initiatives">
       <br />
       <br />
-      <div className="title">
+      {/* <div className="title">
+        <h1><span>OUR</span> INITIATIVES</h1>
+      </div> */}
+
+      <div className="flex items-center justify-center">
         <h1><span>OUR</span> INITIATIVES</h1>
       </div>
       <div className="initiative-cards">
