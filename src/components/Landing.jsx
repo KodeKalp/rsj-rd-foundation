@@ -194,8 +194,9 @@ export default function Landing() {
             style={{
                 backgroundImage: "url('https://images.pexels.com/photos/10629415/pexels-photo-10629415.jpeg?auto=compress&cs=tinysrgb&w=1500')", 
                 backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100"
+                backgroundPosition: "center ",
+                height: "100",
+                background: "dark"
             }}
             >
     {/* Background Effects */}
@@ -232,8 +233,8 @@ export default function Landing() {
 
 
             {/* Footer Section */}
-            <div className="py-8 bg-customBlue1 text-white text-center relative overflow-hidden">
-    {/* Background Effect */}
+            {/* <div className="py-8 bg-customBlue1 text-white text-center relative overflow-hidden">
+    {/* Background Effect 
     <div className="absolute inset-0 bg-gradient-to-r from-customBlue1 to-customBlue2 opacity-30 z-0"></div>
 
     <div className="relative z-10">
@@ -242,28 +243,28 @@ export default function Landing() {
         </p>
         
         <div className="mt-4 flex justify-center gap-6">
-            {/* Facebook Icon */}
+            
             <a href="https://facebook.com" className="text-2xl text-white hover:text-yellow-400 transform transition duration-300 hover:scale-110 hover:shadow-lg">
                 <i className="fab fa-facebook-f"></i>
             </a>
 
-            {/* Twitter Icon */}
+            
             <a href="https://twitter.com" className="text-2xl text-white hover:text-yellow-400 transform transition duration-300 hover:scale-110 hover:shadow-lg">
                 <i className="fab fa-twitter"></i>
             </a>
 
-            {/* Instagram Icon */}
+          
             <a href="https://instagram.com" className="text-2xl text-white hover:text-yellow-400 transform transition duration-300 hover:scale-110 hover:shadow-lg">
                 <i className="fab fa-instagram"></i>
             </a>
 
-            {/* LinkedIn Icon */}
+            
             <a href="https://www.linkedin.com" className="text-2xl text-white hover:text-yellow-400 transform transition duration-300 hover:scale-110 hover:shadow-lg">
                 <i className="fab fa-linkedin-in"></i>
             </a>
         </div>
     </div>
-</div>
+            </div> */}
 
         </>
     );
