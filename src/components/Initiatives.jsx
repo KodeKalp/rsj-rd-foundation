@@ -2,15 +2,11 @@ import React, { useState } from 'react'
 import Carousel from "react-spring-3d-carousel";
 import { v4 as uuidv4 } from "uuid";
 import { config } from "react-spring";
-// import sudhaar from '../assets/banner.jpg';
-// import gyaan from '../assets/rsjcontact.jpg';
-// import nirmaan from '../assets/bannerOne.jpg';
-// import gogreen from '../assets/bannerTwo.jpg';
-// import muskaan from '../assets/Initiatives/Muskaan.png';
 import sudhaar from '../assets/Initiatives/Sudhaar.png';
 import gyaan from '../assets/Initiatives/Gyaan.png';
 import nirmaan from '../assets/Initiatives/Nirmaan.png';
-import gogreen from '../assets/Initiatives/Muskaan.png';
+import gogreen from '../assets/Initiatives/Go-Green.png';
+import muskaan from '../assets/Initiatives/Muskaan.png';
 import '../css/initiatives.css';
 
 const Initiatives = () => {
@@ -43,11 +39,11 @@ const Initiatives = () => {
       content: <img src={gogreen} alt="4" />,
       link: "https://youtu.be/eifgT3ustW0?list=TLGGYDK2KB_YQJMyNDAyMjAyNA"
     },
-    // {
-    //   key: uuidv4(),
-    //   content: <img src={muskaan} alt="5" />,
-    //   link: "https://swd.vit.edu/flagship/blood-d/blood.html"
-    // },
+    {
+      key: uuidv4(),
+      content: <img src={muskaan} alt="5" />,
+      link: "https://swd.vit.edu/flagship/blood-d/blood.html"
+    },
     {
       key: uuidv4(),
       content: <img src={sudhaar} alt="1" />,
@@ -68,11 +64,11 @@ const Initiatives = () => {
       content: <img src={gogreen} alt="4" />,
       link: "https://youtu.be/eifgT3ustW0?list=TLGGYDK2KB_YQJMyNDAyMjAyNA"
     },
-    // {
-    //   key: uuidv4(),
-    //   content: <img src={muskaan} alt="5" />,
-    //   link: "https://swd.vit.edu/flagship/blood-d/blood.html"
-    // },
+    {
+      key: uuidv4(),
+      content: <img src={muskaan} alt="5" />,
+      link: "https://swd.vit.edu/flagship/blood-d/blood.html"
+    },
   ].map((slide, index) => {
     return {
       ...slide,
@@ -96,11 +92,7 @@ const Initiatives = () => {
     <div className="Initiatives">
       <br />
       <br />
-      {/* <div className="title">
-        <h1><span>OUR</span> INITIATIVES</h1>
-      </div> */}
-
-      <div className="flex items-center justify-center">
+      <div className="text-yellow-300 text-center">
         <h1><span>OUR</span> INITIATIVES</h1>
       </div>
       <div className="initiative-cards">

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import contact from "../assets/contactus.png";
+//import contact from "../assets/contactus.png";
+import contact from "../assets/LandImg.png";
 import '../css/contactForm.css';
+import FaqsMain from './Faqsmain';
 
 function ContactForm() {
     const [formData, setFormData] = useState({
@@ -103,6 +105,7 @@ function ContactForm() {
                 </div>
             </div>
             {/* <!-- Contact End --> */}
+            <FaqsMain />
         </>
     );
 }
