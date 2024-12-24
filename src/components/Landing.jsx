@@ -1,4 +1,3 @@
-import main from '../assets/banner.jpg'
 import { useNavigate } from 'react-router-dom';
 
 //import 'animate.css';
@@ -12,60 +11,30 @@ export default function Landing() {
 
     return (
         <>
+        
             {/* Hero Section with Background Image */}
-            
+
             <div className="bg-gradient-to-r from-customBlue1 to-customBlue2 py-20 flex items-center justify-center text-center text-white relative"
-            style={{
-                    backgroundImage: "url('https://images.pexels.com/photos/10629415/pexels-photo-10629415.jpeg?auto=compress&cs=tinysrgb&w=1500')", 
+                style={{
+                    backgroundImage: "url('https://images.pexels.com/photos/10629415/pexels-photo-10629415.jpeg?auto=compress&cs=tinysrgb&w=1500')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     height: "100"
                 }}
 
-                //https://media.istockphoto.com/id/537311780/photo/unity-of-indian-children-asia.jpg?s=2048x2048&w=is&k=20&c=uPWQDmUg_LJ-WdbaNXD2PstnvyC3aVbJQI3SnMlN1BU=
+            //https://media.istockphoto.com/id/537311780/photo/unity-of-indian-children-asia.jpg?s=2048x2048&w=is&k=20&c=uPWQDmUg_LJ-WdbaNXD2PstnvyC3aVbJQI3SnMlN1BU=
             >
-    {/* Background Image Overlay */}
-    <div className="absolute inset-0 bg-cover bg-center opacity-40"></div>
-
-    {/* Content Container */}
-    <div className="relative z-10 bg-opacity-70 px-6 lg:px-12 py-10 rounded-lg max-w-4xl">
-        {/* Main Heading */}
-        <h1 className="text-4xl lg:text-6xl font-bold text-yellow-400 mb-4 animate__animated animate__fadeIn animate__delay-1s">
-            Empowering Rural Communities Future Life
-        </h1>
-
-        {/* Subtitle */}
-        <p className="text-lg lg:text-2xl mt-4 italic mb-8 animate__animated animate__fadeIn animate__delay-2s">
-            At <span className="text-yellow-400">RSJ Rural Development Foundation</span>, we are committed to empowering rural communities and women, fostering sustainable development, and driving positive change in society.
-        </p>
-
-        {/* Action Buttons */}
-        <div className="mt-8 space-x-6 flex justify-center animate__animated animate__fadeIn animate__delay-3s">
-            {/* Know More Button */}
-            <button
-                onClick={handleKnowMore}
-                className="bg-yellow-500 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-yellow-400 transition transform hover:scale-105"
-            >
-                Know More
-            </button>
-
-            {/* Donate Button */}
-            <button
-                className="bg-green-500 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-green-400 transition transform hover:scale-105"
-            >
-                Donate
-            </button>
-        </div>
-    </div>
+               
             </div>
 
-            
+
+
+          
 
 
 
 
 
-            {/* Mission Section */}
 
             <div
             className="py-16 bg-gradient-to-r from-customBlue1 to-customBlue2 text-center text-white relative"
@@ -194,9 +163,8 @@ export default function Landing() {
             style={{
                 backgroundImage: "url('https://images.pexels.com/photos/10629415/pexels-photo-10629415.jpeg?auto=compress&cs=tinysrgb&w=1500')", 
                 backgroundSize: "cover",
-                backgroundPosition: "center ",
-                height: "100",
-                background: "dark"
+                backgroundPosition: "center",
+                height: "100"
             }}
             >
     {/* Background Effects */}
@@ -233,8 +201,8 @@ export default function Landing() {
 
 
             {/* Footer Section */}
-            {/* <div className="py-8 bg-customBlue1 text-white text-center relative overflow-hidden">
-    {/* Background Effect 
+            <div className="py-8 bg-customBlue1 text-white text-center relative overflow-hidden">
+    {/* Background Effect */}
     <div className="absolute inset-0 bg-gradient-to-r from-customBlue1 to-customBlue2 opacity-30 z-0"></div>
 
     <div className="relative z-10">
@@ -243,28 +211,28 @@ export default function Landing() {
         </p>
         
         <div className="mt-4 flex justify-center gap-6">
-            
+            {/* Facebook Icon */}
             <a href="https://facebook.com" className="text-2xl text-white hover:text-yellow-400 transform transition duration-300 hover:scale-110 hover:shadow-lg">
                 <i className="fab fa-facebook-f"></i>
             </a>
 
-            
+            {/* Twitter Icon */}
             <a href="https://twitter.com" className="text-2xl text-white hover:text-yellow-400 transform transition duration-300 hover:scale-110 hover:shadow-lg">
                 <i className="fab fa-twitter"></i>
             </a>
 
-          
+            {/* Instagram Icon */}
             <a href="https://instagram.com" className="text-2xl text-white hover:text-yellow-400 transform transition duration-300 hover:scale-110 hover:shadow-lg">
                 <i className="fab fa-instagram"></i>
             </a>
 
-            
+            {/* LinkedIn Icon */}
             <a href="https://www.linkedin.com" className="text-2xl text-white hover:text-yellow-400 transform transition duration-300 hover:scale-110 hover:shadow-lg">
                 <i className="fab fa-linkedin-in"></i>
             </a>
         </div>
     </div>
-            </div> */}
+</div>
 
         </>
     );

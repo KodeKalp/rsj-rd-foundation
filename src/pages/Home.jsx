@@ -7,6 +7,7 @@ import ContactForm from "../components/ContactForm";
 import Landing from "../components/Landing";
 import Funds from "../components/Funds";
 import BackToTop from "../components/BackToTop";
+import MiddleSection from "../components/MiddleSection";
 
 export default function Home() {
     return (
@@ -22,6 +23,8 @@ export default function Home() {
             </div>
             <Landing />
             <Initiatives />
+            <MiddleSection/>
+            
             {/* <Funds /> */}
             <ContactForm />
             <Footer />
