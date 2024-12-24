@@ -3,6 +3,39 @@ import { Link } from 'react-router-dom';
 export default function Footer() {
     return (
         <div className="bg-customBlue1 text-gray-300 py-12 px-4">
+              {/* Footer Section */}
+      <div className="py-8 bg-customBlue1 text-white text-center relative overflow-hidden">
+        {/* Background Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-customBlue1 to-customBlue2 opacity-30 z-0"></div>
+
+        <div className="relative z-10">
+          <p className="text-lg lg:text-xl font-light opacity-80 mb-6 animate__animated animate__fadeIn animate__delay-1s text-white font-semibold">
+            Follow us on social media to stay updated on our latest initiatives and events.
+          </p>
+
+          <div className="mt-4 flex justify-center gap-6">
+            {/* Facebook Icon */}
+            <a href="https://facebook.com" className="text-2xl text-white hover:text-yellow-400 transform transition duration-300 hover:scale-110 hover:shadow-lg">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+
+            {/* Twitter Icon */}
+            <a href="https://twitter.com" className="text-2xl text-white hover:text-yellow-400 transform transition duration-300 hover:scale-110 hover:shadow-lg">
+              <i className="fab fa-twitter"></i>
+            </a>
+
+            {/* Instagram Icon */}
+            <a href="https://instagram.com" className="text-2xl text-white hover:text-yellow-400 transform transition duration-300 hover:scale-110 hover:shadow-lg">
+              <i className="fab fa-instagram"></i>
+            </a>
+
+            {/* LinkedIn Icon */}
+            <a href="https://www.linkedin.com" className="text-2xl text-white hover:text-yellow-400 transform transition duration-300 hover:scale-110 hover:shadow-lg">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
             <div className="container mx-auto px-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
