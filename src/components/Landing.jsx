@@ -14,14 +14,23 @@ export default function Landing() {
         <>
             {/* Hero Section with Background Image */}
             
-            <div className="bg-gradient-to-r from-customBlue1 to-customBlue2 py-20 flex items-center justify-center text-center text-white relative">
+            <div className="bg-gradient-to-r from-customBlue1 to-customBlue2 py-20 flex items-center justify-center text-center text-white relative"
+            style={{
+                    backgroundImage: "url('https://images.pexels.com/photos/10629415/pexels-photo-10629415.jpeg?auto=compress&cs=tinysrgb&w=1500')", 
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    height: "100"
+                }}
+
+                //https://media.istockphoto.com/id/537311780/photo/unity-of-indian-children-asia.jpg?s=2048x2048&w=is&k=20&c=uPWQDmUg_LJ-WdbaNXD2PstnvyC3aVbJQI3SnMlN1BU=
+            >
     {/* Background Image Overlay */}
     <div className="absolute inset-0 bg-cover bg-center opacity-40"></div>
 
     {/* Content Container */}
     <div className="relative z-10 bg-opacity-70 px-6 lg:px-12 py-10 rounded-lg max-w-4xl">
         {/* Main Heading */}
-        <h1 className="text-4xl lg:text-6xl font-bold text-yellow-300 mb-4 animate__animated animate__fadeIn animate__delay-1s">
+        <h1 className="text-4xl lg:text-6xl font-bold text-yellow-400 mb-4 animate__animated animate__fadeIn animate__delay-1s">
             Empowering Rural Communities Future Life
         </h1>
 
@@ -58,13 +67,21 @@ export default function Landing() {
 
             {/* Mission Section */}
 
-            <div className="py-16 bg-gradient-to-r from-customBlue1 to-customBlue2 text-center text-white relative bg-[url('https://media.istockphoto.com/id/1420066287/photo/group-of-volunteers-picking-up-trash-and-plastic-in-the-nature.jpg?b=1&s=612x612&w=0&k=20&c=XELhGmdtXcafcCkdK91GJZmxkGDYuFJ5UGRhtIe1ZJY')]">
+            <div
+            className="py-16 bg-gradient-to-r from-customBlue1 to-customBlue2 text-center text-white relative"
+            // style={{
+            //     backgroundImage: "url('https://images.pexels.com/photos/10629415/pexels-photo-10629415.jpeg?auto=compress&cs=tinysrgb&w=1500')", 
+            //     backgroundSize: "cover",
+            //     backgroundPosition: "center",
+            //     height: "100"
+            // }}
+>
     {/* Background overlay */}
     <div className="absolute inset-0 bg-black opacity-40"></div>
 
     {/* Content Container */}
     <div className="relative z-10 px-6 lg:px-12 py-8">
-        <h2 className="text-3xl lg:text-5xl font-bold mb-4 text-yellow-300 animate__animated animate__fadeIn animate__delay-1s">
+        <h2 className="text-3xl lg:text-5xl font-bold mb-4 text-white animate__animated animate__fadeIn animate__delay-1s">
             Our Mission
         </h2>
 
@@ -88,9 +105,21 @@ export default function Landing() {
 
 
 
+
             {/* Key Initiatives Section */}
 
-            <div className="py-16 bg-gray-900 text-center relative overflow-hidden">
+            <div className="py-16 bg-gray-900 text-center relative overflow-hidden"
+
+            style={{
+                backgroundImage: "url('https://images.pexels.com/photos/10629418/pexels-photo-10629418.jpeg?auto=compress&cs=tinysrgb&w=600')", 
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                height: "100"
+            }}
+            >
+            
+            //https://images.pexels.com/photos/10629418/pexels-photo-10629418.jpeg?auto=compress&cs=tinysrgb&w=600
+            
     {/* Background Effects */}
     <div className="absolute inset-0 bg-gradient-to-r from-customBlue1 to-customBlue2 opacity-40"></div>
 
@@ -161,7 +190,14 @@ export default function Landing() {
             </div>
 
             {/* How You Can Make a Difference Section */}
-            <div className="py-16 bg-gradient-to-r from-customBlue1 to-customBlue2 text-center text-white relative overflow-hidden">
+            <div className="py-16 bg-gradient-to-r from-customBlue1 to-customBlue2 text-center text-white relative overflow-hidden"
+            style={{
+                backgroundImage: "url('https://images.pexels.com/photos/10629415/pexels-photo-10629415.jpeg?auto=compress&cs=tinysrgb&w=1500')", 
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                height: "100"
+            }}
+            >
     {/* Background Effects */}
     <div className="absolute inset-0 bg-gradient-to-r from-customBlue1 to-customBlue2 opacity-30 z-0"></div>
 
@@ -188,7 +224,7 @@ export default function Landing() {
         </div>
 
         {/* Additional Call to Action Text */}
-        <p className="text-lg lg:text-xl font-light text-white opacity-80 animate__animated animate__fadeIn animate__delay-4s text-center max-w-4xl flex justify-center items-center mx-auto">
+        <p className="text-lg lg:text-xl font-light text-[#eff3f3] opacity-80 animate__animated animate__fadeIn animate__delay-4s text-center max-w-4xl flex justify-center items-center mx-auto">
             Your involvement, whether through volunteering or donations, can help us create lasting change. Together, we can make a real difference in the lives of rural communities and empower women across the nation.
         </p>
     </div>
