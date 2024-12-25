@@ -183,15 +183,8 @@ const MiddleSection = () => {
 
     {/* Flexbox Row 2: (2,1) and (2,2) */}
     <div className="flex flex-col lg:flex-row justify-between items-start gap-8 px-6 lg:px-12 mt-8">
-    <div className="flex flex-col justify-start p-6 text-left text-white flex-1">
-        <h3 className="text-3xl font-bold mb-4 text-green-300 underline decoration-yellow-300">
-          Women Empowerment
-        </h3>
-        <p className="text-lg leading-relaxed">
-          Our programs empower women with skills, knowledge, and resources to become leaders and entrepreneurs. We aim to promote gender equality and create opportunities for women to drive meaningful change in their communities.
-        </p>
-        <button className='bg-yellow-500 w-50 mt-5 text-white px-4 py-2 rounded-full text-lg font-semibold shadow-lg hover:bg-yellow-400 transition transform hover:scale-105'>Our Women Empowerment Work</button>
-      </div>
+
+    
       {/* (2,1) Women Empowerment Image */}
       <div className="flex items-start justify-center flex-1">
         <img
@@ -202,6 +195,16 @@ const MiddleSection = () => {
       </div>
 
       {/* (2,2) Women Empowerment Text */}
+
+      <div className="flex flex-col justify-start p-6 text-left text-white flex-1">
+        <h3 className="text-3xl font-bold mb-4 text-green-300 underline decoration-yellow-300">
+          Women Empowerment
+        </h3>
+        <p className="text-lg leading-relaxed">
+          Our programs empower women with skills, knowledge, and resources to become leaders and entrepreneurs. We aim to promote gender equality and create opportunities for women to drive meaningful change in their communities.
+        </p>
+        <button className='bg-yellow-500 w-50 mt-5 text-white px-4 py-2 rounded-full text-lg font-semibold shadow-lg hover:bg-yellow-400 transition transform hover:scale-105'>Our Women Empowerment Work</button>
+      </div>
       
     </div>
 
