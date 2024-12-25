@@ -12,11 +12,11 @@ const MiddleSection = () => {
     <>
 
 
-      <div className="bg-gradient-to-r from-customBlue1 to-customBlue2 py-10 flex items-center justify-center text-center text-white relative px-10">
+      <div className=" bg-gradient-to-r from-customBlue1 to-customBlue2 py-10 flex items-center justify-center text-center text-white relative px-10">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 bg-cover bg-center opacity-40"></div>
 
-        {/* Content Container */}
+        {/* Content  */}
         <div className="relative z-10 bg-opacity-70 px-6 lg:px-12 py-10 rounded-lg">
           {/* Main Heading */}
           <h1 className="text-4xl lg:text-6xl font-bold text-yellow-400 mb-8 animate__animated animate__fadeIn animate__delay-1s">
@@ -100,8 +100,7 @@ const MiddleSection = () => {
 
       {/* Mission Section */}
 
-      <div
-        className="py-16 bg-gradient-to-r from-customBlue1 to-customBlue2 text-center text-white relative"
+      <div className=" py-16 bg-gradient-to-r from-customBlue1 to-customBlue2 text-center text-white relative"
       // style={{
       //   backgroundImage: "url('https://images.pexels.com/photos/10629415/pexels-photo-10629415.jpeg?auto=compress&cs=tinysrgb&w=1500')", 
       //   backgroundSize: "cover",
@@ -112,7 +111,7 @@ const MiddleSection = () => {
         {/* Background overlay */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
-        {/* Content Container */}
+        {/* Content  */}
         <div className="relative z-10 px-6 lg:px-12 py-8">
           <h2 className="text-3xl lg:text-5xl font-bold mb-4 text-white animate__animated animate__fadeIn animate__delay-1s">
             Our Mission
@@ -140,7 +139,7 @@ const MiddleSection = () => {
 
       {/* Key Initiatives Section */}
       <div
-        className="py-16 bg-black text-center relative overflow-hidden min-h-screen flex items-center"
+        className=" py-16 bg-black text-center relative overflow-hidden min-h-screen flex items-center"
       // style={{
       //   backgroundImage:
       //     "url('https://images.pexels.com/photos/10629418/pexels-photo-10629418.jpeg?auto=compress&cs=tinysrgb&w=600')",
@@ -151,7 +150,7 @@ const MiddleSection = () => {
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-customBlue1 to-customBlue2 opacity-40"></div>
 
-        {/* Content Container */}
+        {/* Content  */}
         <div className="relative z-10 w-full">
           <h2 className="text-4xl lg:text-6xl font-extrabold text-yellow-300 mb-12 tracking-wider animate__animated animate__fadeIn">
             Our Key Initiatives
@@ -226,7 +225,7 @@ const MiddleSection = () => {
 
       {/* How You Can Make a Difference Section */}
 
-      <div className="flex flex-col lg:flex-row items-center justify-between bg-customBlue1 py-16">
+      <div className=" flex flex-col lg:flex-row items-center justify-between bg-customBlue1 py-16">
         <div className="lg:w-1/2">
           <img
             src="https://images.pexels.com/photos/10629415/pexels-photo-10629415.jpeg?auto=compress&cs=tinysrgb&w=1500"
@@ -271,16 +270,7 @@ const MiddleSection = () => {
         {/* Right Image */}
 
       </div>
-
-
-
-
-
-
-
-
-
-
+      
     </>
   )
 }
