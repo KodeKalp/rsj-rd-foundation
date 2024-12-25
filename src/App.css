@@ -1,0 +1,31 @@
+.conbox {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+@media (min-width:576px) {
+    .conbox {
+        max-width: 540px
+    }
+}
+
+@media (min-width:768px) {
+    .conbox {
+        max-width: 720px
+    }
+}
+
+@media (min-width:992px) {
+    .conbox {
+        max-width: 960px
+    }
+}
+
+@media (min-width:1200px) {
+    .conbox {
+        max-width: 1140px
+    }
+}

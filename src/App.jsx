@@ -14,6 +14,7 @@ import Faqs from "./pages/Faqs.jsx";
 import Volenture from "./pages/Volenture.jsx";
 import Team from "./pages/Team.jsx";
 import WhatWeDo from "./pages/WhatWeDo.jsx";
+import './App.css';
 
 
 export default function App() {
