@@ -72,8 +72,8 @@ function ContactForm() {
             <div className="contact">
                 <div className="container">
                     <div className="section-header text-center">
-                        <h3>Get In Touch</h3>
-                        <h2>Contact for any query</h2>
+                        <h3 className='text-[#E35A1E] text-xl'>Get In Touch</h3>
+                        <h2 className='text-[#0084C2]'>Contact for any query</h2>
                     </div>
                     <div className="contact-img">
                         <img src={contact} alt="Image" height={50}/> 

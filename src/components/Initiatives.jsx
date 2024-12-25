@@ -1,120 +1,95 @@
-import React, { useState } from 'react'
-import Carousel from "react-spring-3d-carousel";
-import { v4 as uuidv4 } from "uuid";
-import { config } from "react-spring";
-import sudhaar from '../assets/Initiatives/Sudhaar.png';
-import gyaan from '../assets/Initiatives/Gyaan.png';
-import nirmaan from '../assets/Initiatives/Nirmaan.png';
-import gogreen from '../assets/Initiatives/Go-Green.png';
-import muskaan from '../assets/Initiatives/Muskaan.png';
-import '../css/initiatives.css';
+import React, { useState, useEffect } from "react";
+import sudhaar from "../assets/Initiatives/Sudhaar.png";
+import gyaan from "../assets/Initiatives/Gyaan.png";
+import nirmaan from "../assets/Initiatives/Nirmaan.png";
+import gogreen from "../assets/Initiatives/Go-Green.png";
+import muskaan from "../assets/Initiatives/Muskaan.png";
 
 const Initiatives = () => {
-  const isMobile = window.innerWidth <= 768;
-  const [card, setCard] = useState({
-    goToSlide: 0,
-    offsetRadius: 2,
-    showNavigation: true,
-    config: config.slow
-  });
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const InCards = [
-    {
-      key: uuidv4(),
-      content: <img src={sudhaar} alt="1" />,
-      link: "https://swd.vit.edu/flagship/rr/rr.html"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={gyaan} alt="2" />,
-      link: "https://swd.vit.edu/flagship/utkrash/utkarsh.html"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={nirmaan} alt="3" />,
-      link: "https://youtu.be/9xoo9GvsK5o?list=TLGGZyE3b9VU8G8yNDAyMjAyNA"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={gogreen} alt="4" />,
-      link: "https://youtu.be/eifgT3ustW0?list=TLGGYDK2KB_YQJMyNDAyMjAyNA"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={muskaan} alt="5" />,
-      link: "https://swd.vit.edu/flagship/blood-d/blood.html"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={sudhaar} alt="1" />,
-      link: "https://swd.vit.edu/flagship/rr/rr.html"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={gyaan} alt="2" />,
-      link: "https://swd.vit.edu/flagship/aatmabodh/aatmabodh.html"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={nirmaan} alt="3" />,
-      link: "https://youtu.be/9xoo9GvsK5o?list=TLGGZyE3b9VU8G8yNDAyMjAyNA"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={gogreen} alt="4" />,
-      link: "https://youtu.be/eifgT3ustW0?list=TLGGYDK2KB_YQJMyNDAyMjAyNA"
-    },
-    {
-      key: uuidv4(),
-      content: <img src={muskaan} alt="5" />,
-      link: "https://swd.vit.edu/flagship/blood-d/blood.html"
-    },
-  ].map((slide, index) => {
-    return {
-      ...slide,
-      onClick: () => {
-        if (index === card.goToSlide)
-          window.open(slide.link);
-        setCard({ ...card, goToSlide: index })
-      }
-    }
-  });
+  const slides = [
+    { id: 1, image: sudhaar, link: "https://youtube.com" },
+    { id: 2, image: gyaan, link: "https://youtube.com" },
+    { id: 3, image: nirmaan, link: "https://youtube.com" },
+    { id: 4, image: gogreen, link: "https://youtube.com" },
+    { id: 5, image: muskaan, link: "https://youtube.com" },
+  ];
 
-  const onRight = () => {
-    setCard({ ...card, goToSlide: card.goToSlide + 1 })
-  }
+  // Function to go to the next slide
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  };
 
-  const onLeft = () => {
-    setCard({ ...card, goToSlide: card.goToSlide - 1 })
-  }
+  // Function to go to the previous slide
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+  };
+
+  // Automatically change slides every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 2000); // 5000ms = 5 seconds
+    return () => clearInterval(interval); // Clear the interval on component unmount
+  }, []);
 
   return (
-    <div className="Initiatives">
-      <br />
-      <br />
-      <div className="text-yellow-300 text-center">
-        <h1><span>OUR</span> INITIATIVES</h1>
-      </div>
-      <div className="initiative-cards">
-        <Carousel
-          slides={InCards}
-          goToSlide={card.goToSlide}
-          offsetRadius={card.offsetRadius}
-          showNavigation={card.showNavigation}
-          animationConfig={card.config}
-        />
+    <div className="bg-gradient-to-r from-customBlue1 to-customBlue2 text-center py-10">
+      <h1 className="text-[#E35A1E] text-4xl md:text-5xl font-bold mb-6">
+        OUR <span className="text-white">INITIATIVES</span>
+      </h1>
+
+      {/* Carousel */}
+      <div className="relative w-full max-w-4xl mx-auto">
+        <div className="overflow-hidden">
+          <div
+            className="flex transition-transform duration-500"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {slides.map((slide, index) => (
+              <div key={slide.id} className="min-w-full flex justify-center">
+                <img
+                  src={slide.image}
+                  alt={`Slide ${index + 1}`}
+                  className="cursor-pointer hover:scale-100 transition-transform rounded-lg"
+                  onClick={() => window.open(slide.link, "_blank")}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#E35A1E] text-blue-900 rounded-full p-2 hover:bg-[#0084C2] focus:outline-none"
+          onClick={prevSlide}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z" />
+          </svg>
+        </button>
+
+        <button
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#E35A1E] text-blue-900 rounded-full p-2 hover:bg-[#0084C2] focus:outline-none"
+          onClick={nextSlide}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M4.646 14.354a.5.5 0 0 1 0-.708L9.293 8 4.646 3.354a.5.5 0 1 1 .708-.708l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708 0z" />
+          </svg>
+        </button>
       </div>
 
-      <div className="arrows">
-        <svg onClick={onLeft} xmlns="http://www.w3.org/2000/svg" width={isMobile?"30":"40"} height={isMobile?"30":"40"} fill="currentColor" className="leftarr bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-          <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
-        </svg>
-        <svg onClick={onRight} xmlns="http://www.w3.org/2000/svg" width={isMobile?"30":"40"}  height={isMobile?"30":"40"}  fill="currentColor" className="rightarr bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-          <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-        </svg>
+      {/* Dots for navigation */}
+      <div className="mt-4 flex justify-center space-x-2">
+        {slides.map((_, index) => (
+          <div
+            key={index}
+            className={`w-3 h-3 rounded-full ${currentIndex === index ? "bg-[#E35A1E]" : "bg-gray-400"} cursor-pointer`}
+            onClick={() => setCurrentIndex(index)}
+          ></div>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Initiatives
+export default Initiatives;

@@ -15,7 +15,7 @@ export default function Footer() {
 
                     {/* Contact Us Section */}
                     <div className="space-y-4">
-                        <h2 className="text-lg font-bold text-green-400">Contact Us</h2>
+                        <h2 className="text-lg font-bold text-[#E35A1E]">Contact Us</h2>
                         <a href="https://www.kodekalp.com" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-yellow-300">
                             <p><i className="fas fa-map-marker-alt mr-2"></i>Gondia, Maharashtra, India</p>
                         </a>
@@ -46,7 +46,7 @@ export default function Footer() {
 
                     {/* Popular Links Section */}
                     <div className="space-y-4">
-                        <h2 className="text-lg font-bold text-green-400">Popular Links</h2>
+                        <h2 className="text-lg font-bold text-[#E35A1E]">Popular Links</h2>
                         <a href="/about" className="block text-white hover:text-yellow-300">About Us</a>
                         <a href="/contact" className="block text-white hover:text-yellow-300">Contact Us</a>
                         <a href="/event" className="block text-white hover:text-yellow-300">Popular Causes</a>
@@ -56,7 +56,7 @@ export default function Footer() {
 
                     {/* Useful Links Section */}
                     <div className="space-y-4">
-                        <h2 className="text-lg font-bold text-green-400">Useful Links</h2>
+                        <h2 className="text-lg font-bold text-[#E35A1E]">Useful Links</h2>
                         <Link to="/terms-conditions" className="block text-white hover:text-yellow-300">Terms of Condition</Link>
                         <Link to="/privacy-policy" className="block text-white hover:text-yellow-300">Privacy Policy</Link>
                         <Link to="/cookies" className="block text-white hover:text-yellow-300">Cookies</Link>
@@ -66,7 +66,7 @@ export default function Footer() {
 
                     {/* Newsletter Section */}
                     <div className="space-y-4">
-                        <h2 className="text-lg font-bold text-green-400">Newsletter</h2>
+                        <h2 className="text-lg font-bold text-[#E35A1E]">Newsletter</h2>
                         <form name="NewsLetter" className="flex flex-col space-y-2">
                             <input
                                 name="subscribe"
@@ -77,7 +77,7 @@ export default function Footer() {
                             />
                             <button
                                 type="submit"
-                                className="px-4 py-2 bg-yellow-400 text-blue-900 rounded hover:bg-yellow-500 transition"
+                                className="px-4 py-2 bg-[#E35A1E] text-blue-900 rounded hover:bg-yellow-500 transition"
                             >
                                 Submit
                             </button>
@@ -93,7 +93,7 @@ export default function Footer() {
                             &copy; <a href="#" className="text-white hover:text-yellow-300">RSJ RURAL DEVELOPMENT FOUNDATION</a> | 2024, All Rights Reserved.
                         </div>
                         <div className="text-sm text-white md:text-right">
-                            Design & Developed by <a href="https://www.kodekalp.com" className="text-yellow-300 hover:text-yellow-400">KodeKalp Global Technologies Private Limited</a>
+                            Design & Developed by <a href="https://www.kodekalp.com" className="text-[#E35A1E] hover:text-yellow-400">KodeKalp Global Technologies Private Limited</a>
                         </div>
                     </div>
                 </div>

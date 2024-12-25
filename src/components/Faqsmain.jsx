@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const FaqsMain = () => {
   // FAQs data
@@ -65,7 +66,7 @@ const FaqsMain = () => {
 
   return (
     <div className="py-16 bg-gray-100 min-h-screen">
-      <h2 className="text-center text-4xl lg:text-5xl font-extrabold text-gray-800 mb-12">
+      <h2 className="text-center text-4xl lg:text-5xl font-extrabold text-[#E35A1E] mb-12">
         Frequently Asked Questions
       </h2>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 lg:px-8">
@@ -78,21 +79,21 @@ const FaqsMain = () => {
             >
               <div
                 onClick={() => toggleDropdown(index)}
-                className="cursor-pointer p-6 flex justify-between items-center"
+                className="cursor-pointer p-6 flex justify-between items-center group"
               >
-                <h3 className="text-lg lg:text-xl font-bold text-gray-800">
+                <h3 className="text-lg lg:text-xl font-bold text-gray-800 group-hover:text-[#E35A1E] transition duration-300">
                   {faq.question}
                 </h3>
-                <span
-                  className={`transform transition-transform duration-300 ${
-                    activeIndex === index ? "rotate-180" : "rotate-0"
-                  }`}
-                >
-                  ▼
+                <span className="text-blue-600">
+                  {activeIndex === index ? (
+                    <FaChevronUp className="text-lg transform group-hover:scale-125 transition duration-300" />
+                  ) : (
+                    <FaChevronDown className="text-lg transform group-hover:scale-125 transition duration-300" />
+                  )}
                 </span>
               </div>
               {activeIndex === index && (
-                <div className="p-6 text-gray-700 border-t border-gray-200">
+                <div className="p-6 text-gray-700 border-t border-gray-200 bg-blue-50 animate-fadeIn">
                   {faq.answer}
                 </div>
               )}
@@ -108,21 +109,21 @@ const FaqsMain = () => {
             >
               <div
                 onClick={() => toggleDropdown(index + 5)}
-                className="cursor-pointer p-6 flex justify-between items-center"
+                className="cursor-pointer p-6 flex justify-between items-center group"
               >
-                <h3 className="text-lg lg:text-xl font-bold text-gray-800">
+                <h3 className="text-lg lg:text-xl font-bold text-gray-800 group-hover:text-[#E35A1E] transition duration-300">
                   {faq.question}
                 </h3>
-                <span
-                  className={`transform transition-transform duration-300 ${
-                    activeIndex === index + 5 ? "rotate-180" : "rotate-0"
-                  }`}
-                >
-                  ▼
+                <span className="text-blue-600">
+                  {activeIndex === index + 5 ? (
+                    <FaChevronUp className="text-lg transform group-hover:scale-125 transition duration-300" />
+                  ) : (
+                    <FaChevronDown className="text-lg transform group-hover:scale-125 transition duration-300" />
+                  )}
                 </span>
               </div>
               {activeIndex === index + 5 && (
-                <div className="p-6 text-gray-700 border-t border-gray-200">
+                <div className="p-6 text-gray-700 border-t border-gray-200 bg-blue-50 animate-fadeIn">
                   {faq.answer}
                 </div>
               )}
