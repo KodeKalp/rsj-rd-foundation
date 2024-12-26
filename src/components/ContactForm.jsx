@@ -105,7 +105,7 @@ function ContactForm() {
                 </div>
             </div>
             {/* <!-- Contact End --> */}
-            <FaqsMain />
+            {/* <FaqsMain /> */}
         </>
     );
 }

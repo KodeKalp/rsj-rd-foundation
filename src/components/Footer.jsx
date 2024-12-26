@@ -13,8 +13,30 @@ export default function Footer() {
             <div className="container mx-auto px-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                    {/* Contact Us Section */}
+                   
+
+                    {/* Popular Links Section */}
                     <div className="space-y-4">
+                        <h2 className="text-lg font-bold text-[#E35A1E]">Popular Links</h2>
+                        <a href="/about" className="block text-white hover:text-yellow-300">About Us</a>
+                        <a href="/contact" className="block text-white hover:text-yellow-300">Contact Us</a>
+                        <a href="/event" className="block text-white hover:text-yellow-300">Popular Causes</a>
+                        <a href="/event" className="block text-white hover:text-yellow-300">Upcoming Events</a>
+                        <a href="#" className="block text-white hover:text-yellow-300">Latest Blog</a>
+                    </div>
+
+                    {/* Useful Links Section */}
+                    <div className="space-y-4">
+                        <h2 className="text-lg font-bold text-[#E35A1E]">Useful Links</h2>
+                        <Link to="/terms-conditions" className="block text-white hover:text-yellow-300">Terms of Condition</Link>
+                        <Link to="/privacy-policy" className="block text-white hover:text-yellow-300">Privacy Policy</Link>
+                        <Link to="/cookies" className="block text-white hover:text-yellow-300">Cookies</Link>
+                        <Link to="/helps" className="block text-white hover:text-yellow-300">Help</Link>
+                        <Link to="/faqs" className="block text-white hover:text-yellow-300">FAQs</Link>
+                    </div>
+
+                     {/* Contact Us Section */}
+                     <div className="space-y-4">
                         <h2 className="text-lg font-bold text-[#E35A1E]">Contact Us</h2>
                         <a href="https://www.kodekalp.com" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-yellow-300">
                             <p><i className="fas fa-map-marker-alt mr-2"></i>Gondia, Maharashtra, India</p>
@@ -44,25 +66,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Popular Links Section */}
-                    <div className="space-y-4">
-                        <h2 className="text-lg font-bold text-[#E35A1E]">Popular Links</h2>
-                        <a href="/about" className="block text-white hover:text-yellow-300">About Us</a>
-                        <a href="/contact" className="block text-white hover:text-yellow-300">Contact Us</a>
-                        <a href="/event" className="block text-white hover:text-yellow-300">Popular Causes</a>
-                        <a href="/event" className="block text-white hover:text-yellow-300">Upcoming Events</a>
-                        <a href="#" className="block text-white hover:text-yellow-300">Latest Blog</a>
-                    </div>
 
-                    {/* Useful Links Section */}
-                    <div className="space-y-4">
-                        <h2 className="text-lg font-bold text-[#E35A1E]">Useful Links</h2>
-                        <Link to="/terms-conditions" className="block text-white hover:text-yellow-300">Terms of Condition</Link>
-                        <Link to="/privacy-policy" className="block text-white hover:text-yellow-300">Privacy Policy</Link>
-                        <Link to="/cookies" className="block text-white hover:text-yellow-300">Cookies</Link>
-                        <Link to="/helps" className="block text-white hover:text-yellow-300">Help</Link>
-                        <Link to="/faqs" className="block text-white hover:text-yellow-300">FAQs</Link>
-                    </div>
 
                     {/* Newsletter Section */}
                     <div className="space-y-4">
