@@ -158,7 +158,7 @@ export default function Navbar() {
           </button>
 
           {/* Menu Items */}
-          <div
+            <div
                 className={`fixed inset-0 bg-[#000000aa] md:bg-transparent text-white flex flex-col transform transition-transform duration-300 ${
                     mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
                 } mt-28 md:mt-0 md:relative md:translate-x-0 md:flex md:flex-row md:space-x-6`}
@@ -261,7 +261,7 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-      </div>
+      </div> 
     </>
   );
 }

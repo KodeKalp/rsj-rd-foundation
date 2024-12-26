@@ -41,9 +41,9 @@ const WhatWeDoMain = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto p-6 space-y-6">
-      <h1 className="text-3xl font-bold text-center text-gray-900">What We Do</h1>
-      <p className="text-gray-700 text-center">
+    <div className="py-10 p-6 space-y-6 bg-customBlue1">
+      <h1 className="text-3xl font-bold text-center text-[#E35A1E]">What We Do</h1>
+      <p className="text-[#0084C2] text-center">
         At RSJRD Foundation, we are committed to creating a positive impact across various aspects of society.
       </p>
 
@@ -54,7 +54,7 @@ const WhatWeDoMain = () => {
             className="bg-gray-50 p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300"
           >
             <div className="text-5xl mb-4">{initiative.icon}</div>
-            <h2 className="text-xl font-semibold text-gray-800">{initiative.title}</h2>
+            <h2 className="text-xl font-semibold  text-[#E35A1E]">{initiative.title}</h2>
             <p className="text-gray-700 mt-2">{initiative.description}</p>
           </div>
         ))}

@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
 import Funds from '../components/Funds';
 import PageHeader from "../components/PageHeader";
+import MiddleSection from "../components/MiddleSection";
 
 export default function About() {
     return (
@@ -11,7 +12,8 @@ export default function About() {
             <Navbar />
             <PageHeader title="About Us" path="/about" name="About Us" />
             <Landing />
-            <Funds />
+            <MiddleSection />
+            {/* <Funds /> */}
             <Footer />
             <BackToTop />
         </>

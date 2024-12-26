@@ -139,7 +139,7 @@ const MiddleSection = () => {
           {/* For Mobile */}
 
 
-  <div className="flex gap-4 mt-5">     
+  <div className="md:hidden flex gap-4 mt-5">     
   <div class="bg-green-100 flex flex-col items-center justify-center w-32 h-40 rounded-xl shadow-md">
     <div class="w-14 h-14 flex items-center justify-center bg-[#0084C2] text-white rounded-full my-3">
       <i class="fas fa-female text-2xl"></i>
@@ -163,7 +163,7 @@ const MiddleSection = () => {
 
 
 
-<div className="flex gap-4 mt-5">  
+<div className="md: hidden flex gap-4 mt-5">  
   <div class="bg-green-100 flex flex-col items-center justify-center w-32 h-40 rounded-xl shadow-md">
     <div class="w-14 h-14 flex items-center justify-center bg-[#0084C2] text-white rounded-full my-3">
       <i class="fas fa-child text-2xl"></i>
