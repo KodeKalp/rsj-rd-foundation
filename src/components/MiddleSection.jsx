@@ -163,7 +163,7 @@ const MiddleSection = () => {
 
 
 
-<div className="md: hidden flex gap-4 mt-5">  
+<div className="md:hidden flex gap-4 mt-5">  
   <div class="bg-green-100 flex flex-col items-center justify-center w-32 h-40 rounded-xl shadow-md">
     <div class="w-14 h-14 flex items-center justify-center bg-[#0084C2] text-white rounded-full my-3">
       <i class="fas fa-child text-2xl"></i>
@@ -249,8 +249,9 @@ const MiddleSection = () => {
 
           {/* Grid Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 lg:px-12 my-20">
-            {/* (1,2) Rural Development Image */}
-            <div className="flex justify-center order-1 lg:order-2">
+            {/* (1,1) Rural Development Text */}
+
+            <div className="md:hidden flex justify-center">
               <img
                 src="https://images.pexels.com/photos/95687/pexels-photo-95687.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Rural Development"
@@ -258,9 +259,8 @@ const MiddleSection = () => {
               />
             </div>
 
-            {/* (1,1) Rural Development Text */}
-            <div className="flex flex-col text-left justify-center text-white px-8 lg:px-16 py-8 order-2 lg:order-1">
-              <h3 className="text-3xl font-bold mb-4 text-[#0084C2] decoration-yellow-300">
+            <div className="flex flex-col text-left justify-center text-white px-8 lg:px-16 py-8">
+              <h3 className="text-3xl font-bold mb-4  text-[#0084C2]  decoration-yellow-300">
                 Rural Development
               </h3>
               <p className="text-lg leading-relaxed">
@@ -271,12 +271,24 @@ const MiddleSection = () => {
                 sustainable resources and opportunities.
               </p>
               <button className="bg-[#E35A1E] mt-5 text-white px-4 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-[#0084C2] transition transform hover:scale-105 duration-300">
-                Know More
+                know More
               </button>
             </div>
 
+            {/* (1,2) Rural Development Image */}
+            <div className="hidden md:flex justify-center">
+              <img
+                src="https://images.pexels.com/photos/95687/pexels-photo-95687.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Rural Development"
+                className="rounded-lg shadow-lg w-3/4 h-auto object-cover transform transition duration-500 scale-105 hover:shadow-2xl"
+              />
+            </div>
+
+
+
+
             {/* (2,1) Women Empowerment Image */}
-            <div className="flex justify-center order-3">
+            <div className="flex justify-center">
               <img
                 src="https://images.pexels.com/photos/13270287/pexels-photo-13270287.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Women Empowerment"
@@ -285,8 +297,8 @@ const MiddleSection = () => {
             </div>
 
             {/* (2,2) Women Empowerment Text */}
-            <div className="flex flex-col text-left justify-center text-white px-8 lg:px-16 py-8 order-4">
-              <h3 className="text-3xl font-bold mb-4 text-[#E35A1E] decoration-yellow-300">
+            <div className="flex flex-col text-left justify-center text-white px-8 lg:px-16 py-8">
+              <h3 className="text-3xl font-bold mb-4 text-[#E35A1E]  decoration-yellow-300">
                 Women Empowerment
               </h3>
               <p className="text-lg leading-relaxed">
@@ -296,7 +308,7 @@ const MiddleSection = () => {
                 change in their communities.
               </p>
               <button className="bg-[#0084C2] mt-5 text-white px-4 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-[#E35A1E] transition transform hover:scale-105">
-                Know More
+              know More
               </button>
             </div>
           </div>
@@ -316,17 +328,17 @@ const MiddleSection = () => {
       {/* How You Can Make a Difference Section */}
 
       <div className="bg-customBlue1 py-16 px-6 lg:px-20">
-        <h2 className="text-4xl lg:text-6xl font-extrabold text-[#E35A1E] mb-12 tracking-wider text-center">
+        <h2 className="text-4xl lg:text-6xl font-extrabold text-[#E35A1E] mb-12 tracking-wider text-center sm:text-center">
           Why Differences With Us
         </h2>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-[#0084C2]">
+            <h2 className="text-4xl font-bold text-[#0084C2] text-center">
               Make Every Occasion A Celebration Of Giving
             </h2>
             <div className="w-20 h-1 bg-green-400 rounded-full"></div>
-            <p className="text-lg text-gray-200 leading-relaxed">
+            <p className="text-lg text-gray-200 leading-relaxed lg:text-left sm:text-center">
               Let's turn moments of personal joy into acts of collective
               compassion. With each anniversary, birthday, or a special
               occasion, your donation becomes a beacon of hope for those facing
