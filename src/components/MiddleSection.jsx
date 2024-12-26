@@ -9,7 +9,7 @@ const MiddleSection = () => {
   };
   return (
     <>
-      <div className=" bg-gradient-to-r from-customBlue1 to-customBlue2 py-10 flex items-center justify-center text-center text-white relative px-10">
+      <div className=" bg-gradient-to-r from-customBlue1 to-customBlue2 py-5 flex items-center justify-center text-center text-white relative px-10">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 bg-cover bg-center opacity-40"></div>
 

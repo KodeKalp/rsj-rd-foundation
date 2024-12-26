@@ -33,7 +33,7 @@ const Initiatives = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-customBlue1 to-customBlue2 text-center py-10">
+    <div className="bg-gradient-to-r from-customBlue1 to-customBlue2 text-center py-5">
       <h1 className="text-[#E35A1E] text-4xl md:text-5xl font-bold mb-6">
         OUR <span className="text-white">INITIATIVES</span>
       </h1>
@@ -79,7 +79,7 @@ const Initiatives = () => {
       </div>
 
       {/* Dots for navigation */}
-      <div className="mt-4 flex justify-center space-x-2">
+      <div className="mt-2 flex justify-center space-x-2">
         {slides.map((_, index) => (
           <div
             key={index}

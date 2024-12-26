@@ -44,24 +44,24 @@ export default function Navbar() {
                 <div className="container mx-auto flex flex-wrap justify-between items-center px-4 py-2">
                     {/* Left Section */}
                     <div className="flex flex-wrap items-center space-x-4 text-sm sm:text-base">
-                        <Link to="/admin" className="text-yellow-400 text-xl"><i className="fa fa-user-tie"></i></Link>
+                        <Link to="/admin" className="text-[#E35A1E] text-xl"><i className="fa fa-user-tie"></i></Link>
                         <div className="flex items-center space-x-2">
-                            <i className="fa fa-phone text-yellow-400"></i>
-                            <a href="tel:+91-8380804409" className="text-white hover:text-yellow-400">+91-8380804409</a>
+                            <i className="fa fa-phone text-[#E35A1E]"></i>
+                            <a href="tel:+91-8380804409" className="text-white hover:text-[#E35A1E]">+91-8380804409</a>
                         </div>
                         <div className="flex items-center space-x-2">
-                            <i className="fa fa-envelope text-yellow-400"></i>
-                            <a href="mailto:connect@rsjrdfoundation.org" className="text-white hover:text-yellow-400">connect@rsjrdfoundation.org</a>
+                            <i className="fa fa-envelope text-[#E35A1E]"></i>
+                            <a href="mailto:connect@rsjrdfoundation.org" className="text-white hover:text-[#E35A1E]">connect@rsjrdfoundation.org</a>
                         </div>
                     </div>
 
                     {/* Right Section */}
                     <div className="flex flex-wrap items-center space-x-4 text-sm sm:text-base mt-2 sm:mt-0">
-                        <a href="https://twitter.com" className="hover:text-yellow-400 text-white"><i className="fab fa-twitter"></i></a>
-                        <a href="https://www.facebook.com" className="hover:text-yellow-400 text-white"><i className="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com" className="hover:text-yellow-400 text-white"><i className="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com" className="hover:text-yellow-400 text-white"><i className="fab fa-youtube"></i></a>
-                        <a href="https://www.linkedin.com" className="hover:text-yellow-400 text-white"><i className="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com" className="hover:text-[#E35A1E] text-white"><i className="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com" className="hover:text-[#E35A1E] text-white"><i className="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" className="hover:text-[#E35A1E] text-white"><i className="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" className="hover:text-[#E35A1E] text-white"><i className="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com" className="hover:text-[#E35A1E] text-white"><i className="fab fa-linkedin-in"></i></a>
                         {auth.length > 0 && (
                             <button
                                 onClick={() => {
@@ -95,26 +95,26 @@ export default function Navbar() {
                     <div
                         className={`md:flex md:space-x-6 transition-all duration-300 ${mobileMenuOpen ? 'block' : 'hidden'}`}
                     >
-                        <Link to="/" className={`nav-item ${path === '/' ? 'text-yellow-400' : 'text-white'} px-3 py-2 hover:text-yellow-400`}>Home</Link>
-                        <Link to="/about" className={`nav-item ${path === '/about' ? 'text-yellow-400' : 'text-white'} px-3 py-2 hover:text-yellow-400`}>About</Link>
+                        <Link to="/" className={`nav-item ${path === '/' ? 'text-[#E35A1E]' : 'text-white'} px-3 py-2 hover:text-[#E35A1E]`}>Home</Link>
+                        <Link to="/about" className={`nav-item ${path === '/about' ? 'text-[#E35A1E]' : 'text-white'} px-3 py-2 hover:text-[#E35A1E]`}>About</Link>
                         {/* Useful Links */}
                         {/* <div
                             className="relative nav-item"
                             onMouseEnter={() => setDropdownOpen(true)}
                             onMouseLeave={() => setDropdownOpen(false)}
                         >
-                            <button className="flex items-center px-3 py-2 hover:text-yellow-400">
+                            <button className="flex items-center px-3 py-2 hover:text-[#E35A1E]">
                                 Useful Links
                                 <i className="ml-2 fa fa-chevron-down"></i>
                             </button>
                             {dropdownOpen && (
                                 <div className="absolute bg-black text-white mt-2 py-2 w-48">
-                                    <Link to="/terms-conditions" className="block px-4 py-2 hover:bg-yellow-400 text-white">Terms & Conditions</Link>
-                                    <Link to="/privacy-policy" className="block px-4 py-2 hover:bg-yellow-400 text-white">Privacy Policy</Link>
-                                    <Link to="/cookies" className="block px-4 py-2 hover:bg-yellow-400 text-white">Cookies</Link>
-                                    <Link to="/helps" className="block px-4 py-2 hover:bg-yellow-400 text-white">Helps</Link>
+                                    <Link to="/terms-conditions" className="block px-4 py-2 hover:bg-[#E35A1E] text-white">Terms & Conditions</Link>
+                                    <Link to="/privacy-policy" className="block px-4 py-2 hover:bg-[#E35A1E] text-white">Privacy Policy</Link>
+                                    <Link to="/cookies" className="block px-4 py-2 hover:bg-[#E35A1E] text-white">Cookies</Link>
+                                    <Link to="/helps" className="block px-4 py-2 hover:bg-[#E35A1E] text-white">Helps</Link>
                                     <hr className="my-2 border-gray-500" />
-                                    <Link to="/faqs" className="block px-4 py-2 hover:bg-yellow-400 text-white">FAQs</Link>
+                                    <Link to="/faqs" className="block px-4 py-2 hover:bg-[#E35A1E] text-white">FAQs</Link>
                                 </div>
                             )}
                         </div> */}
@@ -124,23 +124,23 @@ export default function Navbar() {
                             onMouseEnter={() => setDropdownOpenPages(true)}
                             onMouseLeave={() => setDropdownOpenPages(false)}
                         >
-                            <button className="flex items-center px-3 py-2 hover:text-yellow-400">
+                            <button className="flex items-center px-3 py-2 hover:text-[#E35A1E]">
                                 Pages
                                 <i className="ml-2 fa fa-chevron-down"></i>
                             </button>
                             {dropdownOpenPages && (
                                 <div className="absolute bg-black text-white mt-2 py-2 w-48">
-                                    <Link to="/about" className="block px-4 py-2 hover:bg-yellow-400 text-white">Detail Page</Link>
-                                    <Link to="/what-we-do" className="block px-4 py-2 hover:bg-yellow-400 text-white">What We Do</Link>
-                                    <Link to="/team" className="block px-4 py-2 hover:bg-yellow-400 text-white">Meet The Team</Link>
-                                    <Link to="/volunteer" className="block px-4 py-2 hover:bg-yellow-400 text-white">Become A Volunteer</Link>
+                                    <Link to="/about" className="block px-4 py-2 hover:bg-[#E35A1E] text-white">Detail Page</Link>
+                                    <Link to="/what-we-do" className="block px-4 py-2 hover:bg-[#E35A1E] text-white">What We Do</Link>
+                                    <Link to="/team" className="block px-4 py-2 hover:bg-[#E35A1E] text-white">Meet The Team</Link>
+                                    <Link to="/volunteer" className="block px-4 py-2 hover:bg-[#E35A1E] text-white">Become A Volunteer</Link>
                                     <hr className="my-2 border-gray-500" />
-                                    <Link to="/donate" className="block px-4 py-2 hover:bg-yellow-400 text-white">Donate Now</Link>
+                                    <Link to="/donate" className="block px-4 py-2 hover:bg-[#E35A1E] text-white">Donate Now</Link>
                                 </div>
                             )}
                         </div>
-                        <Link to="/event" className={`nav-item ${path === '/event' ? 'text-yellow-400' : 'text-white'} px-3 py-2 hover:text-yellow-400`}>Events</Link>
-                        <Link to="/contact" className={`nav-item ${path === '/contact' ? 'text-yellow-400' : 'text-white'} px-3 py-2 hover:text-yellow-400`}>Contact</Link>
+                        <Link to="/event" className={`nav-item ${path === '/event' ? 'text-[#E35A1E]' : 'text-white'} px-3 py-2 hover:text-[#E35A1E]`}>Events</Link>
+                        <Link to="/contact" className={`nav-item ${path === '/contact' ? 'text-[#E35A1E]' : 'text-white'} px-3 py-2 hover:text-[#E35A1E]`}>Contact</Link>
                     </div>
                 </div>
             </div>

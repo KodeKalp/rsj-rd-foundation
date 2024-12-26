@@ -72,7 +72,7 @@ export default function Footer() {
                                 name="subscribe"
                                 type="email"
                                 placeholder="Email goes here"
-                                className="w-full px-4 py-2 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                className="w-full px-4 py-2 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-[#E35A1E]"
                                 required
                             />
                             <button
@@ -93,7 +93,7 @@ export default function Footer() {
                             &copy; <a href="#" className="text-white hover:text-yellow-300">RSJ RURAL DEVELOPMENT FOUNDATION</a> | 2024, All Rights Reserved.
                         </div>
                         <div className="text-sm text-white md:text-right">
-                            Design & Developed by <a href="https://www.kodekalp.com" className="text-[#E35A1E] hover:text-yellow-400">KodeKalp Global Technologies Private Limited</a>
+                            Design & Developed by <a href="https://www.kodekalp.com" className="text-[#E35A1E] hover:text-[#E35A1E]">KodeKalp Global Technologies Private Limited</a>
                         </div>
                     </div>
                 </div>
