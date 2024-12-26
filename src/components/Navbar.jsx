@@ -158,13 +158,11 @@ export default function Navbar() {
           </button>
 
           {/* Menu Items */}
-            <div
-                className={`fixed inset-0 bg-[#000000aa] md:bg-transparent text-white flex flex-col transform transition-transform duration-300 ${
-                    mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
-                } mt-28 md:mt-0 md:relative md:translate-x-0 md:flex md:flex-row md:space-x-6`}
-                >
-
-
+          <div
+            className={`fixed inset-0 bg-[#000000aa] md:bg-transparent text-white flex flex-col transform transition-transform duration-300 ${
+              mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+            } mt-28 md:mt-0 md:relative md:translate-x-0 md:flex md:flex-row md:space-x-6`}
+          >
             {/* Home Link */}
             <Link
               to="/"
@@ -196,46 +194,50 @@ export default function Navbar() {
                 Pages
                 <i className="ml-2 fa fa-chevron-down"></i>
               </button>
-              {dropdownOpenPages && (
-                <div className="absolute bg-black text-white mt-2 py-2 w-48">
+              <div
+                className={`overflow-hidden transition-[height] duration-300 ${
+                  dropdownOpenPages ? "h-auto" : "h-0"
+                }`}
+              >
+                <div className="bg-black text-white mt-2 py-2 w-48">
                   <Link
                     to="/about"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white"
+                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white  text-center"
                     onClick={() => setDropdownOpenPages(false)}
                   >
                     Detail Page
                   </Link>
                   <Link
                     to="/what-we-do"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white"
+                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white   text-center"
                     onClick={() => setDropdownOpenPages(false)}
                   >
                     What We Do
                   </Link>
                   <Link
                     to="/team"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white"
+                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white   text-center"
                     onClick={() => setDropdownOpenPages(false)}
                   >
-                    Meet The Team
+                    Meet Team
                   </Link>
                   <Link
                     to="/volunteer"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white"
+                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white  text-center"
                     onClick={() => setDropdownOpenPages(false)}
                   >
-                    Become A Volunteer
+                    Become Part
                   </Link>
                   <hr className="my-2 border-gray-500" />
                   <Link
                     to="/donate"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white"
+                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white   text-center"
                     onClick={() => setDropdownOpenPages(false)}
                   >
                     Donate Now
                   </Link>
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Events Link */}
@@ -261,7 +263,7 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-      </div> 
+      </div>
     </>
   );
 }

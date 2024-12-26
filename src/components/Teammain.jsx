@@ -3,41 +3,41 @@ import React from 'react';
 const TeamMain = () => {
   const teamMembers = [
     {
-      name: 'John Doe',
+      name: 'Kartik Paul',
       position: 'Founder & CEO',
-      image: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600',
-      bio: 'John is a passionate leader dedicated to creating a positive impact through the RSJRD Foundation.',
+      image: 'https://images.pexels.com/photos/12283121/pexels-photo-12283121.jpeg?auto=compress&cs=tinysrgb&w=600',
+      bio: 'Kartik is a passionate leader dedicated to creating a positive impact through the RSJRD Foundation.',
     },
     {
-      name: 'Jane Smith',
+      name: 'Vaibhab Katre',
       position: 'Program Manager',
       image: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600',
-      bio: 'Jane manages our community outreach programs and ensures seamless execution of initiatives.',
+      bio: 'Vaibhab manages our community outreach programs and ensures seamless execution of initiatives.',
     },
     {
       name: 'Michael Brown',
       position: 'Volunteer Coordinator',
-      image: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://images.pexels.com/photos/8237038/pexels-photo-8237038.jpeg?auto=compress&cs=tinysrgb&w=600',
       bio: 'Michael works closely with our volunteers, helping them align their skills with our projects.',
     },
-    {
-      name: 'Emily Davis',
-      position: 'Communications Lead',
-      image: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600',
-      bio: 'Emily oversees all communication strategies to amplify the foundation’s message.',
-    },
-    {
-        name: 'Emily Davis',
-        position: 'Communications Lead',
-        image: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600',
-        bio: 'Emily oversees all communication strategies to amplify the foundation’s message.',
-      },
-      {
-        name: 'Emily Davis',
-        position: 'Communications Lead',
-        image: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600',
-        bio: 'Emily oversees all communication strategies to amplify the foundation’s message.',
-      },
+    // {
+    //   name: 'Emily Davis',
+    //   position: 'Communications Lead',
+    //   image: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   bio: 'Emily oversees all communication strategies to amplify the foundation’s message.',
+    // }
+    // {
+    //     name: 'Emily Davis',
+    //     position: 'Communications Lead',
+    //     image: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //     bio: 'Emily oversees all communication strategies to amplify the foundation’s message.',
+    //   },
+    //   {
+    //     name: 'Emily Davis',
+    //     position: 'Communications Lead',
+    //     image: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //     bio: 'Emily oversees all communication strategies to amplify the foundation’s message.',
+    //   },
   ];
 
   return (
