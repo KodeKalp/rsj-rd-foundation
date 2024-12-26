@@ -25,11 +25,11 @@ export default function Navbar() {
 
         function toggleStickyNavbar() {
             if (window.scrollY > topBar.offsetHeight) {
-                navbar.classList.add('nav-sticky');
-                topBar.classList.add('hidden');
+                // navbar.classList.add('nav-sticky');
+                // topBar.classList.add('hidden');
             } else {
-                navbar.classList.remove('nav-sticky');
-                topBar.classList.remove('hidden');
+                // navbar.classList.remove('nav-sticky');
+                // topBar.classList.remove('hidden');
             }
         }
 
@@ -80,7 +80,7 @@ export default function Navbar() {
             </div>
 
             {/* Navbar */}
-            <div className="navbar bg-[#0000004f] text-white fixed w-full sm:top-12 z-40 shadow-md">
+            <div className="navbar bg-[#000000c4] text-white fixed w-full sm:top-12 z-40 shadow-md">
                 <div className="container mx-auto flex justify-between items-center px-4 py-2">
                     <Link to="/" className="text-3xl font-bold uppercase text-white">
                     <img src={logo} alt="Logo" width={100} className='rounded-full' height={100}/>
