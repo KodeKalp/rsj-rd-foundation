@@ -1,19 +1,27 @@
 import { useEffect, useState, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/mainlogo.png";
+//import { Link } from "react-router-dom";
+//import logo from "./path/to/logo";
 
 export default function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
+  //const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
+  const dropdownRef = useRef(null);
+  const timerRef = useRef(null);
+  const path = window.location.pathname;
   const [dropdownOpen, setDropdownOpen] = useState(false);
   //const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
   const [auth, setAuth] = useState("");
   //const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const path = useLocation().pathname;
+  //const path = useLocation().pathname;
   const navigate = useNavigate();
 
   //const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
-  const dropdownRef = useRef(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
+  // const dropdownRef = useRef(null);
+  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Close dropdown if clicking outside
   useEffect(() => {
@@ -54,6 +62,17 @@ export default function Navbar() {
     window.addEventListener("scroll", toggleStickyNavbar);
     return () => window.removeEventListener("scroll", toggleStickyNavbar);
   }, []);
+
+  const handleMouseEnter = () => {
+    clearTimeout(timerRef.current); // Clear any existing timer
+    setDropdownOpenPages(true); // Open the dropdown immediately
+  };
+
+  const handleMouseLeave = () => {
+    timerRef.current = setTimeout(() => {
+      setDropdownOpenPages(false); // Close the dropdown after a delay
+    }, 200); // Adjust the delay time (200ms) as needed
+  };
 
   return (
     <>
@@ -134,9 +153,113 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Navbar */}
+      {/* Navbar for Desktop */}
+      <div className="hidden lg:block navbar bg-[#000000c4] text-white fixed w-full sm:top-12 z-40 shadow-md">
+        <div className="container mx-auto flex justify-between items-center px-4 py-2">
+          {/* Logo */}
+          <Link to="/" className="text-3xl font-bold uppercase text-white">
+            <img
+              src={logo}
+              alt="Logo"
+              width={100}
+              className="rounded-full"
+              height={100}
+            />
+          </Link>
 
-      <div className="navbar bg-[#000000c4] text-white fixed w-full sm:top-12 z-40 shadow-md">
+          {/* Menu Items */}
+          <div className="flex flex-row space-x-6">
+            <Link
+              to="/"
+              className={`nav-item ${
+                path === "/" ? "text-[#E35A1E]" : "text-white"
+              } px-3 py-2 hover:text-[#E35A1E]`}
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className={`nav-item ${
+                path === "/about" ? "text-[#E35A1E]" : "text-white"
+              } px-3 py-2 hover:text-[#E35A1E]`}
+            >
+              About
+            </Link>
+
+            {/* Pages Dropdown */}
+            <div
+              className="relative nav-item"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              {/* Dropdown Toggle Button */}
+              <button className="flex items-center px-3 py-2 hover:text-[#E35A1E]">
+                Pages
+                <i className="ml-2 fa fa-chevron-down"></i>
+              </button>
+
+              {/* Dropdown Menu */}
+              <div
+                className={`absolute bg-black text-white mt-2 py-2 w-48 transition-all duration-300 ${
+                  dropdownOpenPages ? "block" : "hidden"
+                }`}
+              >
+                <Link
+                  to="/about"
+                  className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
+                >
+                  Detail Page
+                </Link>
+                <Link
+                  to="/what-we-do"
+                  className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
+                >
+                  What We Do
+                </Link>
+                <Link
+                  to="/team"
+                  className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
+                >
+                  Meet Team
+                </Link>
+                <Link
+                  to="/volunteer"
+                  className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
+                >
+                  Become Part
+                </Link>
+                <hr className="my-2 border-gray-500" />
+                <Link
+                  to="/donate"
+                  className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
+                >
+                  Donate Now
+                </Link>
+              </div>
+            </div>
+
+            <Link
+              to="/event"
+              className={`nav-item ${
+                path === "/event" ? "text-[#E35A1E]" : "text-white"
+              } px-3 py-2 hover:text-[#E35A1E]`}
+            >
+              Events
+            </Link>
+            <Link
+              to="/contact"
+              className={`nav-item ${
+                path === "/contact" ? "text-[#E35A1E]" : "text-white"
+              } px-3 py-2 hover:text-[#E35A1E]`}
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Navbar for Mobile */}
+      <div className="block lg:hidden navbar bg-[#000000c4] text-white fixed w-full sm:top-12 z-40 shadow-md">
         <div className="container mx-auto flex justify-between items-center px-4 py-2">
           {/* Logo */}
           <Link to="/" className="text-3xl font-bold uppercase text-white">
@@ -151,19 +274,18 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle Button */}
           <button
-            className="navbar-toggler text-white md:hidden"
+            className="navbar-toggler text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <i className={`fas ${mobileMenuOpen ? "fa-times" : "fa-bars"}`}></i>
           </button>
 
-          {/* Menu Items */}
+          {/* Mobile Menu Items */}
           <div
-            className={`fixed inset-0 bg-[#000000aa] md:bg-transparent text-white flex flex-col transform transition-transform duration-300 ${
+            className={`fixed inset-0 bg-[#000000aa] text-white flex flex-col transform transition-transform duration-300 ${
               mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-            } mt-28 md:mt-0 md:relative md:translate-x-0 md:flex md:flex-row md:space-x-6`}
+            } mt-28`}
           >
-            {/* Home Link */}
             <Link
               to="/"
               className={`nav-item ${
@@ -173,8 +295,6 @@ export default function Navbar() {
             >
               Home
             </Link>
-
-            {/* About Link */}
             <Link
               to="/about"
               className={`nav-item ${
@@ -202,28 +322,28 @@ export default function Navbar() {
                 <div className="bg-black text-white mt-2 py-2 w-48">
                   <Link
                     to="/about"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white  text-center"
+                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
                     onClick={() => setDropdownOpenPages(false)}
                   >
                     Detail Page
                   </Link>
                   <Link
                     to="/what-we-do"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white   text-center"
+                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
                     onClick={() => setDropdownOpenPages(false)}
                   >
                     What We Do
                   </Link>
                   <Link
                     to="/team"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white   text-center"
+                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
                     onClick={() => setDropdownOpenPages(false)}
                   >
                     Meet Team
                   </Link>
                   <Link
                     to="/volunteer"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white  text-center"
+                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
                     onClick={() => setDropdownOpenPages(false)}
                   >
                     Become Part
@@ -231,7 +351,7 @@ export default function Navbar() {
                   <hr className="my-2 border-gray-500" />
                   <Link
                     to="/donate"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white   text-center"
+                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
                     onClick={() => setDropdownOpenPages(false)}
                   >
                     Donate Now
@@ -240,7 +360,6 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Events Link */}
             <Link
               to="/event"
               className={`nav-item ${
@@ -250,8 +369,6 @@ export default function Navbar() {
             >
               Events
             </Link>
-
-            {/* Contact Link */}
             <Link
               to="/contact"
               className={`nav-item ${
