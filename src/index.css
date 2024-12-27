@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
-  color: #777777;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -37,7 +37,7 @@ h6 {
 }
 
 a {
-    color: #4a4c70;
+    color: #ffffff;
     transition: .3s;
 }
 
