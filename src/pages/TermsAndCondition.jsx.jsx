@@ -10,11 +10,9 @@ import TermsConditionMain from '../components/TermsConditionMain';
 const TermsAndCondition = () => {
     return(
         <>
-            <Navbar />
             <PageHeader title="Terms & Condition" path="terms-conditions" name="terms-conditions" />
             <TermsConditionMain />
-            <Footer />
-            <BackToTop />
+           
         </>
     )
 }

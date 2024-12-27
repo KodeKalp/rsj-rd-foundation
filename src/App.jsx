@@ -15,12 +15,15 @@ import Volenture from "./pages/Volenture.jsx";
 import Team from "./pages/Team.jsx";
 import WhatWeDo from "./pages/WhatWeDo.jsx";
 import './App.css';
+import Navbar from "./components/Navbar.jsx";
+import BackToTop from "./components/BackToTop.jsx";
+import Footer from "./components/Footer.jsx";
 
 
 export default function App() {
   return (
     <BrowserRouter>
-      {/* <Navbar /> Move Navbar outside of Routes */}
+      <Navbar /> 
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
@@ -39,8 +42,8 @@ export default function App() {
         <Route exact path="/what-we-do" element={<WhatWeDo />} />
         <Route exact path="*" element={<Navigate to={"/"} />} />
       </Routes>
-      {/* <Footer />
-      <BackToTop /> */}
+      <Footer />
+      <BackToTop />
     </BrowserRouter>
   );
 }

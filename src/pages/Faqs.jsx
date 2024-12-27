@@ -8,11 +8,9 @@ import FaqsMain from '../components/Faqsmain';
 const Faqs = () => {
     return(
         <>
-            <Navbar />
             <PageHeader title="faqs" path="faqs" name="faqs" />
             <FaqsMain />
-            <Footer />
-            <BackToTop />
+            
         </>
     )
 }

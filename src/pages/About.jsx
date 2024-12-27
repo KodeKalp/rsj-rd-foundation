@@ -9,13 +9,11 @@ import MiddleSection from "../components/MiddleSection";
 export default function About() {
     return (
         <>
-            <Navbar />
             <PageHeader title="About Us" path="/about" name="About Us" />
             <Landing />
             <MiddleSection />
             {/* <Funds /> */}
-            <Footer />
-            <BackToTop />
+            
         </>
     );
 }

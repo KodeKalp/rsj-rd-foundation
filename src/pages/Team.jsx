@@ -11,11 +11,9 @@ import TeamMain from '../components/Teammain';
 const Team = () => {
     return(
         <>
-            <Navbar />
             <PageHeader title="Teams" path="team" name="team" />
             <TeamMain/>
-            <Footer />
-            <BackToTop />
+           
         </>
     )
 }

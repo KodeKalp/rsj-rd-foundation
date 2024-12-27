@@ -8,11 +8,9 @@ import HelpMain from '../components/HelpMain';
 const Help = () => {
     return(
         <>
-            <Navbar />
             <PageHeader title="helps" path="helps" name="helps" />
             <HelpMain />
-            <Footer />
-            <BackToTop />
+            
         </>
     )
 }

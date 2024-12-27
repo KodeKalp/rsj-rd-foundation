@@ -11,11 +11,9 @@ import VolentureMain from '../components/VolentureMain';
 const Volenture = () => {
     return(
         <>
-            <Navbar />
             <PageHeader title="Volenture" path="volenture" name="volenture" />
             <VolentureMain/>
-            <Footer />
-            <BackToTop />
+           
         </>
     )
 }

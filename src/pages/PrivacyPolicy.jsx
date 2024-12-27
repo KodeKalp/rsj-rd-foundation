@@ -9,11 +9,9 @@ import PrivacyMain from '../components/PrivacyMain';
 const PrivacyPolicy = () => {
     return(
         <>
-            <Navbar />
             <PageHeader title="Privacy Policy" path="privacy-policy" name="privacy-policy" />
             <PrivacyMain />
-            <Footer />
-            <BackToTop />
+            
         </>
     )
 }

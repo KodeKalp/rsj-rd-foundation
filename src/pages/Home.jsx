@@ -12,8 +12,7 @@ import MiddleSection from "../components/MiddleSection";
 export default function Home() {
     return (
         <>
-            <Navbar />
-            <div className="video-container">
+            <div className="video-container " >
                 <video src={space} type="video/mp4" autoPlay loop muted>
                     Sorry, your browser doesn't support videos.
                 </video>
@@ -27,8 +26,7 @@ export default function Home() {
             
             {/* <Funds /> */}
             <ContactForm />
-            <Footer />
-            <BackToTop />
+           
         </>
     );
 }

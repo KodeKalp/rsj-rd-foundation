@@ -12,11 +12,9 @@ import WhatWeDoMain from '../components/WhatWeDoMain';
 const WhatWeDo = () => {
     return(
         <>
-            <Navbar />
             <PageHeader title="What We Do" path="what-we-do" name="whatwedo" />
             <WhatWeDoMain/>
-            <Footer />
-            <BackToTop />
+           
         </>
     )
 }

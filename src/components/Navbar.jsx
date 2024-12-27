@@ -181,7 +181,7 @@ export default function Navbar() {
             </div>
 
             {/* Navbar for Desktop */}
-            <div className="hidden lg:block navbar    w-full sm:top-12  lg:z-50 shadow-md py-3 px-6 sm:px-8 font-medium capitalize  items-center  fixed top-6 right-1/2 translate-x-1/2 bg-black/80 backdrop-blur-sm z-50 transition-all ease duration-300">
+            <div className="hidden lg:block navbar w-full sm:top-12  lg:z-50 shadow-md py-3 px-6 sm:px-8 font-medium capitalize  items-center  fixed top-6 right-1/2 translate-x-1/2 bg-black/80 backdrop-blur-sm z-50 transition-all ease duration-300">
                 <div className="container mx-auto flex justify-between items-center px-4 py-2">
                     {/* Logo */}
                     <Link to="/" className="text-3xl font-bold uppercase text-white">

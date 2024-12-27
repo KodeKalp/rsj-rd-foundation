@@ -8,11 +8,9 @@ import BackToTop from '../components/BackToTop';
 const Cookis = () => {
     return(
         <>
-         <Navbar />
             <PageHeader title="cookis" path="cookies" name="cookies" />
             <CookiesMain />
-            <Footer />
-            <BackToTop />
+            
         </>
     )
 }

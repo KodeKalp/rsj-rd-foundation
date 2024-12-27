@@ -7,11 +7,9 @@ import PageHeader from "../components/PageHeader";
 export default function Events() {
     return (
         <>
-            <Navbar />
             <PageHeader title="Flagship Events" path="/event" name="Events" />
             <Initiatives />
-            <Footer />
-            <BackToTop />
+            
         </>
     );
 }

@@ -3,7 +3,7 @@ import '../css/page_header.css';
 export default function PageHeader({ title, path, name }) {
 
     return (
-        <div className="page-header" >
+        <div className="page-header" style={{marginTop:"-500px"}}>
             <div className="container">
                 <div className="row">
                     <div className="col-12">

@@ -4,9 +4,10 @@
 .page-header {
     position: relative;
     margin-bottom: 0;
-    padding: 210px 0 90px 0;
+    margin-top: 0 !important;
+    padding: 410px 0 90px 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .4)), url(../assets/page-header.jpg);
+    background: linear-gradient( #E35A1E8e, #0085c28e ), url(../assets/page-header.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +16,7 @@
 
 .page-header h2 {
     position: relative;
-    color: #E35A1E;
+    color: #0085c2;
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -29,18 +30,18 @@
     height: 2px;
     left: calc(50% - 50px);
     bottom: 0;
-    background: #FDBE33;
+    background: orangered;
 }
 
 .page-header a {
     position: relative;
     padding: 0 12px;
     font-size: 22px;
-    color: #ffffff;
+    color: #0085c2;
 }
 
 .page-header a:hover {
-    color: #FDBE33;
+    color: #0084C2;
 }
 
 .page-header a::after {
@@ -75,7 +76,7 @@
 
 @media (max-width: 767.98px) {
     .page-header {
-        padding: 45px 0;
+        padding: 210px 0 50px 0;
     }
     
     .page-header h2 {
