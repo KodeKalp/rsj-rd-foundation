@@ -1,12 +1,33 @@
 import { useEffect, useState, useRef } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/mainlogo.png";
 //import { Link } from "react-router-dom";
 //import logo from "./path/to/logo";
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
+  const handleLinkClick = (path) => {
+    setDropdownOpenPages(false); // Close the dropdown
+    navigate(path); // Navigate to the desired path
+  };
+
+  const handleMouseLeave = () => {
+    timerRef.current = setTimeout(() => {
+      setDropdownOpenPages(false);
+    }, 200); // Ensure this doesn't interfere with navigation
+  };
+
+  // const handleMouseEnter = () => {
+  //   setDropdownOpenPages(true);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setTimeout(() => {
+  //     setDropdownOpenPages(false);
+  //   }, 300); // Allow time for user interaction
+  // };
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  //const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
   //const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
   const dropdownRef = useRef(null);
   const timerRef = useRef(null);
@@ -68,11 +89,11 @@ export default function Navbar() {
     setDropdownOpenPages(true); // Open the dropdown immediately
   };
 
-  const handleMouseLeave = () => {
-    timerRef.current = setTimeout(() => {
-      setDropdownOpenPages(false); // Close the dropdown after a delay
-    }, 200); // Adjust the delay time (200ms) as needed
-  };
+  // const handleMouseLeave = () => {
+  //   timerRef.current = setTimeout(() => {
+  //     setDropdownOpenPages(false); // Close the dropdown after a delay
+  //   }, 200); // Adjust the delay time (200ms) as needed
+  // };
 
   return (
     <>
@@ -187,18 +208,18 @@ export default function Navbar() {
             </Link>
 
             {/* Pages Dropdown */}
+
             <div
               className="relative nav-item"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
+              ref={dropdownRef}
             >
-              {/* Dropdown Toggle Button */}
               <button className="flex items-center px-3 py-2 hover:text-[#E35A1E]">
                 Pages
                 <i className="ml-2 fa fa-chevron-down"></i>
               </button>
 
-              {/* Dropdown Menu */}
               <div
                 className={`absolute bg-black text-white mt-2 py-2 w-48 transition-all duration-300 ${
                   dropdownOpenPages ? "block" : "hidden"
@@ -207,24 +228,28 @@ export default function Navbar() {
                 <Link
                   to="/about"
                   className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
+                  onClick={() => setDropdownOpenPages(false)}
                 >
                   Detail Page
                 </Link>
                 <Link
                   to="/what-we-do"
                   className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
+                  onClick={() => setDropdownOpenPages(false)}
                 >
                   What We Do
                 </Link>
                 <Link
                   to="/team"
                   className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
+                  onClick={() => setDropdownOpenPages(false)}
                 >
                   Meet Team
                 </Link>
                 <Link
                   to="/volunteer"
                   className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
+                  onClick={() => setDropdownOpenPages(false)}
                 >
                   Become Part
                 </Link>
@@ -232,6 +257,7 @@ export default function Navbar() {
                 <Link
                   to="/donate"
                   className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
+                  onClick={() => setDropdownOpenPages(false)}
                 >
                   Donate Now
                 </Link>
@@ -257,6 +283,8 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+
 
       {/* Navbar for Mobile */}
       <div className="block lg:hidden navbar bg-[#000000c4] text-white fixed w-full sm:top-12 z-40 shadow-md">
@@ -319,7 +347,7 @@ export default function Navbar() {
                   dropdownOpenPages ? "h-auto" : "h-0"
                 }`}
               >
-                <div className="bg-black text-white mt-2 py-2 w-48">
+                <div className=" text-white mt-2 py-2 w-48">
                   <Link
                     to="/about"
                     className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"

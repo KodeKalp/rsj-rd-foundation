@@ -125,21 +125,21 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <div className="flex flex-col items-center px-4 py-8">
+    <div className="flex flex-col items-center px-4 py-8 bg-customBlue1">
       {/* Contact Details */}
       <div className="flex flex-col lg:flex-row items-start lg:items-center lg:justify-between w-full max-w-5xl gap-8">
         <div className="text-left">
           <h2 className="text-[#E35A1E] text-3xl font-bold">Get in Touch With Us</h2>
-          <h3 className="text-xl font-semibold mt-2">
+          <h3 className="text-xl font-semibold mt-2 text-gray-100">
             Contact Us For Any Questions!
           </h3>
-          <div className="mt-4 space-y-2">
-            <p className="font-bold">RSJRD FOUNDATION,</p>
+          <div className="mt-4 space-y-2 text-gray-100" >
+            <p className="font-bold">RSJ RURAL DEVELOPMENT FOUNDATION,</p>
             <p>Sainik Coloni, Plot No.-2062, Katangi</p>
             <p>Gondia, Maharashtra, India, 441601</p>
             
-            <p>📞 <a href="tel:+918928991161" className="text-[#E35A1E]">+91 892 899 1161</a></p>
-            <p>📧 <a href="mailto:write2us@akshayachaitanya.org" className="text-[#E35A1E]">write2us@akshayachaitanya.org</a></p>
+            <p>📞 <a href="tel:+918380804409" className="text-[#E35A1E]">+91 83 8080 4409</a></p>
+            <p>📧 <a href="mailto:connect@rsjrdfoundation.org" className="text-[#E35A1E]">connect@rsjrdfoundation.org</a></p>
           </div>
         </div>
 
