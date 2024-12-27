@@ -1,59 +1,48 @@
 import { useEffect, useState, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "../assets/mainlogo.png";
-//import { Link } from "react-router-dom";
-//import logo from "./path/to/logo";
 
 export default function Navbar() {
-  const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
-  const handleLinkClick = (path) => {
-    setDropdownOpenPages(false); // Close the dropdown
-    navigate(path); // Navigate to the desired path
-  };
-
-  const handleMouseLeave = () => {
-    timerRef.current = setTimeout(() => {
-      setDropdownOpenPages(false);
-    }, 200); // Ensure this doesn't interfere with navigation
-  };
-
-  // const handleMouseEnter = () => {
-  //   setDropdownOpenPages(true);
-  // };
-
-  // const handleMouseLeave = () => {
-  //   setTimeout(() => {
-  //     setDropdownOpenPages(false);
-  //   }, 300); // Allow time for user interaction
-  // };
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  //const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
-  //const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
-  const dropdownRef = useRef(null);
+  const [dropdownOpenPagesDesktop, setDropdownOpenPagesDesktop] = useState(false);
+  const [dropdownOpenPagesMobile, setDropdownOpenPagesMobile] = useState(false);
+  const desktopDropdownRef = useRef(null);
+  const mobileDropdownRef = useRef(null);
   const timerRef = useRef(null);
-  const path = window.location.pathname;
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  //const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
   const [auth, setAuth] = useState("");
-  //const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  //const path = useLocation().pathname;
   const navigate = useNavigate();
+  const location = useLocation();
+  const path = location.pathname;
 
-  //const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  // const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
-  // const dropdownRef = useRef(null);
-  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Close dropdown if clicking outside
+  // Close desktop dropdown if clicking outside
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpenPages(false);
+      if (
+        desktopDropdownRef.current &&
+        !desktopDropdownRef.current.contains(event.target)
+      ) {
+        setDropdownOpenPagesDesktop(false);
       }
     };
     document.addEventListener("mousedown", handleOutsideClick);
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
+
+  // Close mobile dropdown if clicking outside
+  useEffect(() => {
+    const handleOutsideClickMobile = (event) => {
+      if (
+        mobileDropdownRef.current &&
+        !mobileDropdownRef.current.contains(event.target)
+      ) {
+        setDropdownOpenPagesMobile(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutsideClickMobile);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClickMobile);
     };
   }, []);
 
@@ -72,6 +61,7 @@ export default function Navbar() {
 
     function toggleStickyNavbar() {
       if (window.scrollY > topBar.offsetHeight) {
+        // Uncomment and add desired sticky behavior if needed
         // navbar.classList.add('nav-sticky');
         // topBar.classList.add('hidden');
       } else {
@@ -84,21 +74,27 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", toggleStickyNavbar);
   }, []);
 
-  const handleMouseEnter = () => {
+  // Desktop Dropdown Handlers
+  const handleDesktopMouseEnter = () => {
     clearTimeout(timerRef.current); // Clear any existing timer
-    setDropdownOpenPages(true); // Open the dropdown immediately
+    setDropdownOpenPagesDesktop(true); // Open the dropdown immediately
   };
 
-  // const handleMouseLeave = () => {
-  //   timerRef.current = setTimeout(() => {
-  //     setDropdownOpenPages(false); // Close the dropdown after a delay
-  //   }, 200); // Adjust the delay time (200ms) as needed
-  // };
+  const handleDesktopMouseLeave = () => {
+    timerRef.current = setTimeout(() => {
+      setDropdownOpenPagesDesktop(false); // Close the dropdown after a delay
+    }, 200); // Adjust the delay time (200ms) as needed
+  };
+
+  // Mobile Dropdown Handler
+  const toggleMobileDropdown = () => {
+    setDropdownOpenPagesMobile(!dropdownOpenPagesMobile);
+  };
 
   return (
     <>
       {/* Top Bar for large screens */}
-      <div className="top-bar bg-opacity-50 bg-black text-white border-b border-gray-300 fixed w-full z-50 hidden sm:block">
+      <div className="top-bar bg-opacity-50 bg-black text-white border-b border-gray-300 fixed w-full z-30 hidden sm:block">
         <div className="container mx-auto flex flex-wrap justify-between items-center px-4 py-2">
           {/* Left Section */}
           <div className="flex flex-wrap items-center space-x-4 text-sm sm:text-base">
@@ -130,30 +126,40 @@ export default function Navbar() {
             <a
               href="https://twitter.com"
               className="hover:text-[#E35A1E] text-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-twitter"></i>
             </a>
             <a
               href="https://www.facebook.com"
               className="hover:text-[#E35A1E] text-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-facebook-f"></i>
             </a>
             <a
               href="https://www.instagram.com"
               className="hover:text-[#E35A1E] text-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-instagram"></i>
             </a>
             <a
               href="https://www.youtube.com"
               className="hover:text-[#E35A1E] text-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-youtube"></i>
             </a>
             <a
               href="https://www.linkedin.com"
               className="hover:text-[#E35A1E] text-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fab fa-linkedin-in"></i>
             </a>
@@ -175,7 +181,9 @@ export default function Navbar() {
       </div>
 
       {/* Navbar for Desktop */}
-      <div className="hidden lg:block navbar bg-[#000000c4] text-white fixed w-full sm:top-12 z-40 shadow-md">
+      <div className="hidden lg:block navbar  text-white  w-full sm:top-12  lg:z-50 shadow-md py-3 px-6 sm:px-8    font-medium capitalize  items-center  
+        fixed top-6 right-1/2 translate-x-1/2 bg-black/80 backdrop-blur-sm z-50
+        transition-all ease duration-300">
         <div className="container mx-auto flex justify-between items-center px-4 py-2">
           {/* Logo */}
           <Link to="/" className="text-3xl font-bold uppercase text-white">
@@ -211,53 +219,54 @@ export default function Navbar() {
 
             <div
               className="relative nav-item"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              ref={dropdownRef}
+              onMouseEnter={handleDesktopMouseEnter}
+              onMouseLeave={handleDesktopMouseLeave}
+              ref={desktopDropdownRef}
             >
-              <button className="flex items-center px-3 py-2 hover:text-[#E35A1E]">
+              {/* Dropdown Toggle Button */}
+              <button className="flex items-center px-3 py-2 hover:text-[#E35A1E] focus:outline-none">
                 Pages
                 <i className="ml-2 fa fa-chevron-down"></i>
               </button>
 
               <div
-                className={`absolute bg-black text-white mt-2 py-2 w-48 transition-all duration-300 ${
-                  dropdownOpenPages ? "block" : "hidden"
+                className={`absolute bg-black text-white mt-2 py-2 w-48 rounded-md shadow-lg transition-all duration-300 ${
+                  dropdownOpenPagesDesktop ? "block" : "hidden"
                 }`}
               >
                 <Link
-                  to="/about"
-                  className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
-                  onClick={() => setDropdownOpenPages(false)}
+                  to="/detail-page"
+                  className="block px-4 py-2 hover:bg-[#E35A1E]"
+                  onClick={() => setDropdownOpenPagesDesktop(false)}
                 >
                   Detail Page
                 </Link>
                 <Link
                   to="/what-we-do"
-                  className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
-                  onClick={() => setDropdownOpenPages(false)}
+                  className="block px-4 py-2 hover:bg-[#E35A1E]"
+                  onClick={() => setDropdownOpenPagesDesktop(false)}
                 >
                   What We Do
                 </Link>
                 <Link
                   to="/team"
-                  className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
-                  onClick={() => setDropdownOpenPages(false)}
+                  className="block px-4 py-2 hover:bg-[#E35A1E]"
+                  onClick={() => setDropdownOpenPagesDesktop(false)}
                 >
                   Meet Team
                 </Link>
                 <Link
                   to="/volunteer"
-                  className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
-                  onClick={() => setDropdownOpenPages(false)}
+                  className="block px-4 py-2 hover:bg-[#E35A1E]"
+                  onClick={() => setDropdownOpenPagesDesktop(false)}
                 >
                   Become Part
                 </Link>
                 <hr className="my-2 border-gray-500" />
                 <Link
                   to="/donate"
-                  className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
-                  onClick={() => setDropdownOpenPages(false)}
+                  className="block px-4 py-2 hover:bg-[#E35A1E]"
+                  onClick={() => setDropdownOpenPagesDesktop(false)}
                 >
                   Donate Now
                 </Link>
@@ -302,7 +311,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle Button */}
           <button
-            className="navbar-toggler text-white"
+            className="navbar-toggler text-white focus:outline-none"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <i className={`fas ${mobileMenuOpen ? "fa-times" : "fa-bars"}`}></i>
@@ -312,100 +321,120 @@ export default function Navbar() {
           <div
             className={`fixed inset-0 bg-[#000000aa] text-white flex flex-col transform transition-transform duration-300 ${
               mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-            } mt-28`}
+            } mt-28 z-50`}
           >
-            <Link
-              to="/"
-              className={`nav-item ${
-                path === "/" ? "text-[#E35A1E]" : "text-white"
-              } px-3 py-2 hover:text-[#E35A1E]`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className={`nav-item ${
-                path === "/about" ? "text-[#E35A1E]" : "text-white"
-              } px-3 py-2 hover:text-[#E35A1E]`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About
-            </Link>
+            <div className="flex flex-col space-y-4 p-4">
+              <Link
+                to="/"
+                className={`nav-item ${
+                  path === "/" ? "text-[#E35A1E]" : "text-white"
+                } px-3 py-2 hover:text-[#E35A1E]`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className={`nav-item ${
+                  path === "/about" ? "text-[#E35A1E]" : "text-white"
+                } px-3 py-2 hover:text-[#E35A1E]`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </Link>
 
-            {/* Pages Dropdown */}
-            <div className="relative nav-item" ref={dropdownRef}>
-              <button
-                className="flex items-center px-3 py-2 hover:text-[#E35A1E]"
-                onClick={() => setDropdownOpenPages(!dropdownOpenPages)}
-              >
-                Pages
-                <i className="ml-2 fa fa-chevron-down"></i>
-              </button>
+              {/* Pages Dropdown */}
               <div
-                className={`overflow-hidden transition-[height] duration-300 ${
-                  dropdownOpenPages ? "h-auto" : "h-0"
-                }`}
+                className="relative nav-item"
+                ref={mobileDropdownRef}
               >
-                <div className=" text-white mt-2 py-2 w-48">
-                  <Link
-                    to="/about"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
-                    onClick={() => setDropdownOpenPages(false)}
-                  >
-                    Detail Page
-                  </Link>
-                  <Link
-                    to="/what-we-do"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
-                    onClick={() => setDropdownOpenPages(false)}
-                  >
-                    What We Do
-                  </Link>
-                  <Link
-                    to="/team"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
-                    onClick={() => setDropdownOpenPages(false)}
-                  >
-                    Meet Team
-                  </Link>
-                  <Link
-                    to="/volunteer"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
-                    onClick={() => setDropdownOpenPages(false)}
-                  >
-                    Become Part
-                  </Link>
-                  <hr className="my-2 border-gray-500" />
-                  <Link
-                    to="/donate"
-                    className="block px-4 py-2 hover:bg-[#E35A1E] text-white text-center"
-                    onClick={() => setDropdownOpenPages(false)}
-                  >
-                    Donate Now
-                  </Link>
+                <button
+                  className="flex items-center px-3 py-2 hover:text-[#E35A1E] w-full text-left focus:outline-none"
+                  onClick={toggleMobileDropdown}
+                >
+                  Pages
+                  <i className="ml-2 fa fa-chevron-down"></i>
+                </button>
+                <div
+                  className={`overflow-hidden transition-[height] duration-300 ${
+                    dropdownOpenPagesMobile ? "h-auto" : "h-0"
+                  }`}
+                >
+                  <div className=" text-white mt-2 py-2 w-full">
+                    <Link
+                      to="/detail-page"
+                      className="block px-4 py-2 hover:bg-[#E35A1E]"
+                      onClick={() => {
+                        setDropdownOpenPagesMobile(false);
+                        setMobileMenuOpen(false);
+                      }}
+                    >
+                      Detail Page
+                    </Link>
+                    <Link
+                      to="/what-we-do"
+                      className="block px-4 py-2 hover:bg-[#E35A1E]"
+                      onClick={() => {
+                        setDropdownOpenPagesMobile(false);
+                        setMobileMenuOpen(false);
+                      }}
+                    >
+                      What We Do
+                    </Link>
+                    <Link
+                      to="/team"
+                      className="block px-4 py-2 hover:bg-[#E35A1E]"
+                      onClick={() => {
+                        setDropdownOpenPagesMobile(false);
+                        setMobileMenuOpen(false);
+                      }}
+                    >
+                      Meet Team
+                    </Link>
+                    <Link
+                      to="/volunteer"
+                      className="block px-4 py-2 hover:bg-[#E35A1E]"
+                      onClick={() => {
+                        setDropdownOpenPagesMobile(false);
+                        setMobileMenuOpen(false);
+                      }}
+                    >
+                      Become Part
+                    </Link>
+                    <hr className="my-2 border-gray-500" />
+                    <Link
+                      to="/donate"
+                      className="block px-4 py-2 hover:bg-[#E35A1E]"
+                      onClick={() => {
+                        setDropdownOpenPagesMobile(false);
+                        setMobileMenuOpen(false);
+                      }}
+                    >
+                      Donate Now
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <Link
-              to="/event"
-              className={`nav-item ${
-                path === "/event" ? "text-[#E35A1E]" : "text-white"
-              } px-3 py-2 hover:text-[#E35A1E]`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Events
-            </Link>
-            <Link
-              to="/contact"
-              className={`nav-item ${
-                path === "/contact" ? "text-[#E35A1E]" : "text-white"
-              } px-3 py-2 hover:text-[#E35A1E]`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
+              <Link
+                to="/event"
+                className={`nav-item ${
+                  path === "/event" ? "text-[#E35A1E]" : "text-white"
+                } px-3 py-2 hover:text-[#E35A1E]`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Events
+              </Link>
+              <Link
+                to="/contact"
+                className={`nav-item ${
+                  path === "/contact" ? "text-[#E35A1E]" : "text-white"
+                } px-3 py-2 hover:text-[#E35A1E]`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
       </div>
