@@ -7,7 +7,7 @@
     margin-top: 0 !important;
     padding: 410px 0 90px 0;
     text-align: center;
-    background: linear-gradient( #E35A1E8e, #0085c28e ), url(../assets/page-header.jpg);
+    background: linear-gradient(#0085c28e , #E35A1E8e), url(../assets/page-header.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,7 +16,8 @@
 
 .page-header h2 {
     position: relative;
-    color: #0085c2;
+    color: #fff;
+    /* color: #0085c2; */
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -37,7 +38,7 @@
     position: relative;
     padding: 0 12px;
     font-size: 22px;
-    color: #0085c2;
+    color: #0084C2;
 }
 
 .page-header a:hover {

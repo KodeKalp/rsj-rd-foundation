@@ -86,7 +86,59 @@ const MiddleSection = () => {
 
           {/* For DeskTop */}
 
-          <div class="hidden md:flex flex-wrap gap-6 justify-center px-10 py-8">
+          {/* <div class="hidden lg:flex flex-wrap gap-6 justify-center px-10 py-8">
+            <div class="bg-green-100 flex items-center justify-center w-72 h-32 rounded-3xl shadow-md px-6">
+              <div class="w-16 h-16 flex items-center justify-center bg-[#0084C2] text-white rounded-full">
+                <i class="fas fa-female text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <div class="text-3xl font-bold text-[#E35A1E]">5.8M+</div>
+                <div class="text-xl font-semibold text-[#0084C2] text-left">
+                  Empowered
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-green-100 flex items-center justify-center w-72 h-32 rounded-3xl shadow-md px-6">
+              <div class="w-16 h-16 flex items-center justify-center bg-[#0084C2] text-white rounded-full">
+                <i class="fas fa-home text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <div class="text-3xl font-bold text-[#E35A1E]">4.6M+</div>
+                <div class="text-xl font-semibold text-[#0084C2] text-left">
+                  Villages
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-green-100 flex items-center justify-center w-72 h-32 rounded-3xl shadow-md px-6">
+              <div class="w-16 h-16 flex items-center justify-center bg-[#0084C2] text-white rounded-full">
+                <i class="fas fa-child text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <div class="text-3xl font-bold text-[#E35A1E]">142+</div>
+                <div class="text-xl font-semibold text-[#0084C2] text-left">
+                  Children
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-green-100 flex items-center justify-center w-72 h-32 rounded-3xl shadow-md px-6">
+              <div class="w-16 h-16 flex items-center justify-center bg-[#0084C2] text-white rounded-full">
+                <i class="fas fa-users text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <div class="text-3xl font-bold text-[#E35A1E]">50+</div>
+                <div class="text-xl font-semibold text-[#0084C2] text-left">
+                  Families
+                </div>
+              </div>
+            </div>
+          </div> */}
+
+          {/* <div class="hidden md:flex flex-wrap gap-6 justify-center px-10 py-8"> */}
+
+          <div class="hidden lg:grid lg:grid-cols-4 gap-6 px-10 py-8">
             <div class="bg-green-100 flex items-center justify-center w-72 h-32 rounded-3xl shadow-md px-6">
               <div class="w-16 h-16 flex items-center justify-center bg-[#0084C2] text-white rounded-full">
                 <i class="fas fa-female text-3xl"></i>
@@ -136,56 +188,111 @@ const MiddleSection = () => {
             </div>
           </div>
 
+          <div class="hidden md:grid md:grid-cols-2 lg:hidden py-8 gap-6 px-10">
+            <div class="ml-5 bg-green-100 flex items-center justify-center w-72 h-32 rounded-3xl shadow-md px-6">
+              <div class="w-16 h-16 flex items-center justify-center bg-[#0084C2] text-white rounded-full">
+                <i class="fas fa-female text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <div class="text-3xl font-bold text-[#E35A1E]">5.8M+</div>
+                <div class="text-xl font-semibold text-[#0084C2] text-left">
+                  Empowered
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-green-100 flex items-center justify-center w-72 h-32 rounded-3xl shadow-md px-6">
+              <div class="w-16 h-16 flex items-center justify-center bg-[#0084C2] text-white rounded-full">
+                <i class="fas fa-home text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <div class="text-3xl font-bold text-[#E35A1E]">4.6M+</div>
+                <div class="text-xl font-semibold text-[#0084C2] text-left">
+                  Villages
+                </div>
+              </div>
+            </div>
+
+            <div class="ml-5 bg-green-100 flex items-center justify-center w-72 h-32 rounded-3xl shadow-md px-6">
+              <div class="w-16 h-16 flex items-center justify-center bg-[#0084C2] text-white rounded-full">
+                <i class="fas fa-child text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <div class="text-3xl font-bold text-[#E35A1E]">142+</div>
+                <div class="text-xl font-semibold text-[#0084C2] text-left">
+                  Children
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-green-100 flex items-center justify-center w-72 h-32 rounded-3xl shadow-md px-6">
+              <div class="w-16 h-16 flex items-center justify-center bg-[#0084C2] text-white rounded-full">
+                <i class="fas fa-users text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <div class="text-3xl font-bold text-[#E35A1E]">50+</div>
+                <div class="text-xl font-semibold text-[#0084C2] text-left">
+                  Families
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* </div> */}
+
           {/* For Mobile */}
 
+          <div className="md:hidden flex gap-4 mt-5">
+            <div class="bg-green-100 flex flex-col items-center justify-center w-32 h-40 rounded-xl shadow-md">
+              <div class="w-14 h-14 flex items-center justify-center bg-[#0084C2] text-white rounded-full my-3">
+                <i class="fas fa-female text-2xl"></i>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-[#E35A1E]">5.8M+</div>
+                <div class="text-base font-semibold text-[#0084C2]">
+                  Empowered
+                </div>
+              </div>
+            </div>
 
-  <div className="md:hidden flex gap-4 mt-5">     
-  <div class="bg-green-100 flex flex-col items-center justify-center w-32 h-40 rounded-xl shadow-md">
-    <div class="w-14 h-14 flex items-center justify-center bg-[#0084C2] text-white rounded-full my-3">
-      <i class="fas fa-female text-2xl"></i>
-    </div>
-    <div class="text-center">
-      <div class="text-2xl font-bold text-[#E35A1E]">5.8M+</div>
-      <div class="text-base font-semibold text-[#0084C2]">Empowered</div>
-    </div>
-  </div>
+            <div class="bg-green-100 flex flex-col items-center justify-center w-32 h-40 rounded-xl shadow-md">
+              <div class="w-14 h-14 flex items-center justify-center bg-[#0084C2] text-white rounded-full my-3">
+                <i class="fas fa-home text-2xl"></i>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-[#E35A1E]">4.6M+</div>
+                <div class="text-base font-semibold text-[#0084C2]">
+                  Villages
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <div class="bg-green-100 flex flex-col items-center justify-center w-32 h-40 rounded-xl shadow-md">
-    <div class="w-14 h-14 flex items-center justify-center bg-[#0084C2] text-white rounded-full my-3">
-      <i class="fas fa-home text-2xl"></i>
-    </div>
-    <div class="text-center">
-      <div class="text-2xl font-bold text-[#E35A1E]">4.6M+</div>
-      <div class="text-base font-semibold text-[#0084C2]">Villages</div>
-    </div>
-  </div>
-  </div>
+          <div className="md:hidden flex gap-4 mt-5">
+            <div class="bg-green-100 flex flex-col items-center justify-center w-32 h-40 rounded-xl shadow-md">
+              <div class="w-14 h-14 flex items-center justify-center bg-[#0084C2] text-white rounded-full my-3">
+                <i class="fas fa-child text-2xl"></i>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-[#E35A1E]">142+</div>
+                <div class="text-base font-semibold text-[#0084C2]">
+                  Children
+                </div>
+              </div>
+            </div>
 
-
-
-<div className="md:hidden flex gap-4 mt-5">  
-  <div class="bg-green-100 flex flex-col items-center justify-center w-32 h-40 rounded-xl shadow-md">
-    <div class="w-14 h-14 flex items-center justify-center bg-[#0084C2] text-white rounded-full my-3">
-      <i class="fas fa-child text-2xl"></i>
-    </div>
-    <div class="text-center">
-      <div class="text-2xl font-bold text-[#E35A1E]">142+</div>
-      <div class="text-base font-semibold text-[#0084C2]">Children</div>
-    </div>
-  </div>
-
-  <div class="bg-green-100 flex flex-col items-center justify-center w-32 h-40 rounded-xl shadow-md">
-    <div class="w-14 h-14 flex items-center justify-center bg-[#0084C2] text-white rounded-full my-3">
-      <i class="fas fa-users text-2xl"></i>
-    </div>
-    <div class="text-center">
-      <div class="text-2xl font-bold text-[#E35A1E]">50+</div>
-      <div class="text-base font-semibold text-[#0084C2]">Families</div>
-    </div>
-  </div>
-  </div>
-
-
+            <div class="bg-green-100 flex flex-col items-center justify-center w-32 h-40 rounded-xl shadow-md">
+              <div class="w-14 h-14 flex items-center justify-center bg-[#0084C2] text-white rounded-full my-3">
+                <i class="fas fa-users text-2xl"></i>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-[#E35A1E]">50+</div>
+                <div class="text-base font-semibold text-[#0084C2]">
+                  Families
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Action Buttons */}
           <div className="mt-12 space-x-6 flex justify-center animate__animated animate__fadeIn animate__delay-3s">
@@ -284,9 +391,6 @@ const MiddleSection = () => {
               />
             </div>
 
-
-
-
             {/* (2,1) Women Empowerment Image */}
             <div className="flex justify-center">
               <img
@@ -308,7 +412,7 @@ const MiddleSection = () => {
                 change in their communities.
               </p>
               <button className="bg-[#0084C2] mt-5 text-white px-4 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-[#E35A1E] transition transform hover:scale-105">
-              know More
+                know More
               </button>
             </div>
           </div>
